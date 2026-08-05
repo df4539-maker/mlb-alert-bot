@@ -37,3 +37,14 @@ Elo as-of: entrenado solo con partidos **anteriores** a `game_date` (sin leak de
 Pendientes: **10** · Fuente: `data/forward_bets.csv`
 
 Gráficos: `reports/backtest_analisis.png`, `reports/baseline_vs_real.png`
+
+## Filtro operativo (acuerdo)
+
+- **No contar / no recomendar** apuestas en **contra** del modelo (P < 50%).
+- Decisión a **250** ops mirando sobre todo **con + value** (edge >= 3% vs cuota real).
+- Ver rutina completa: `reports/RUTINA.md`.
+
+### Solo con modelo (cerradas, sin #2 COL ni #6 ATH)
+
+6 ops · 3W/3L · L75 · neto +24.35 · ROI +32.5% (muestra chica; no concluible vs baseline +6.7%).
+

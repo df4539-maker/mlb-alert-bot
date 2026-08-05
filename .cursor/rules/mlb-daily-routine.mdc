@@ -1,0 +1,34 @@
+---
+description: Rutina diaria MLB forward test (mañana picks / noche cierre) y reglas de stake
+alwaysApply: true
+---
+
+# MLB Alert Bot — PC de bots (rutina)
+
+Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, sin `listen`.
+
+## Cuando el usuario pida el día / apuestas de la mañana (~6–7 AM)
+
+1. Pedir o usar el **saldo de cuenta** si no lo dio.
+2. Armar top **5–10** value del **mismo día**, PRE-MATCH only.
+3. En el cuadro incluir siempre: partido, lado (1/2), P modelo, edge vs cuota ref y vs cuota si la hay, stake sugerido.
+4. **Recordar en la respuesta** estas reglas (breve, al inicio o al final):
+   - No apostar si **P modelo &lt; 50%** (contra el modelo).
+   - Preferir **edge ≥ +3%** vs cuota real (1/cuota). Si es “con” pero cara, marcarla y sugerir saltarla.
+   - Stake **1–2% del bank** (ej. L500→L5–10; L1000→L10–20); no all-in; no subir solo por una gane.
+   - Máx. picks: **5** si bank chico, **8–10** si hay margen; no llenar cupo por llenar.
+   - Contador hacia **250** operaciones “con modelo” (+ idealmente value) antes de decidir estrategia.
+5. Separar ya apostadas de disponibles. Registrar tickets cuando mande fotos/`aposte`.
+
+## Cuando el usuario actualice de noche (~8–9 PM)
+
+1. Cerrar ganó/perdió; actualizar `data/forward_bets.csv` y `reports/FORWARD_STATUS.md`.
+2. Cuadro cerradas: P, cuota modelo, edge, con/contra, resultado, profit.
+3. Comparar vs baseline (win 55.9%, ROI +6.7%) — enfatizar muestra chica.
+4. Push a GitHub si pide actualizar el repo (sin `.env`).
+
+## Buckets al reportar
+
+- **Con + value** (P≥50% y edge≥3%): principal para la meta 250.
+- **Con pero sin value**: opcional / cautela.
+- **Contra**: error de proceso; no recomendar.
