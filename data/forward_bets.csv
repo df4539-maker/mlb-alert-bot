@@ -1,0 +1,30 @@
+logged_at,game_date,away,home,side,stake,decimal_odds,american_odds,result,notes
+2026-08-03T03:11:28.927616+00:00,2026-08-02,BOS,LAD,away,25.00,2.550,,win,desde foto Hondubet; ticket=5256503135; score=4:8; payout=63.75
+2026-08-03T19:52:54.252278+00:00,2026-08-03,BOS,NYY,away,10.00,1.450,,pending,confirmado por Telegram
+2026-08-03T22:43:02.157656+00:00,2026-08-03,BOS,MIL,home,10.00,1.640,,pending,confirmado por Telegram
+2026-08-03T22:48:43.152020+00:00,2026-08-03,BOS,LAD,away,10.00,1.800,,pending,confirmado por Telegram
+2026-08-03T23:02:13.368294+00:00,2026-08-03,BOS,HOU,home,10.00,1.800,,pending,confirmado por Telegram
+2026-08-03T23:07:50.080178+00:00,2026-08-03,BOS,TBR,away,10.00,1.550,,pending,confirmado por Telegram
+2026-08-03T23:10:52.319473+00:00,2026-08-03,BOS,BAL,home,10.00,1.760,,pending,confirmado por Telegram
+2026-08-04T02:11:00.524270+00:00,2026-08-03,TB,COL,home,10.00,1.550,,win,desde foto Hondubet; ticket=5259564754; score=2:8; payout=15.55
+2026-08-04T03:38:07.919757+00:00,2026-08-03,PIT,MIL,home,10.00,1.640,,loss,desde foto Hondubet; ticket=5259490664; score=3:4
+2026-08-04T03:38:46.403169+00:00,2026-08-03,LAD,CHC,away,10.00,1.800,,loss,desde foto Hondubet; ticket=5259506896; score=10:5
+2026-08-04T19:46:47.712917+00:00,2026-08-04,BOS,BAL,home,20.00,1.760,,pending,confirmado por Telegram
+2026-08-04T19:49:07.031077+00:00,2026-08-04,BOS,CIN,home,20.00,2.150,,pending,confirmado por Telegram
+2026-08-04T19:50:27.384384+00:00,2026-08-04,BOS,CIN,away,20.00,2.150,,pending,confirmado por Telegram
+2026-08-04T19:51:20.113126+00:00,2026-08-04,BOS,NYY,home,20.00,2.150,,pending,confirmado por Telegram
+2026-08-04T19:51:58.482923+00:00,2026-08-04,BOS,BOS,home,20.00,1.740,,pending,confirmado por Telegram
+2026-08-04T19:52:51.778948+00:00,2026-08-04,BOS,MIN,away,20.00,1.660,,pending,confirmado por Telegram
+2026-08-04T19:53:20.443236+00:00,2026-08-04,BOS,MIL,home,20.00,1.660,,pending,confirmado por Telegram
+2026-08-04T21:20:46.304894+00:00,2026-08-04,BOS,CIN,away,20.00,2.150,,pending,confirmado por Telegram
+2026-08-05T13:10:06.065762+00:00,2026-08-05,BOS,BAL,home,20.00,1.800,,pending,confirmado por Telegram
+2026-08-05T13:13:35.772063+00:00,2026-08-05,STL,NYY,home,20.00,1.640,,pending,desde foto Hondubet; ticket=5263943929; ganador incl extras; seleccion=1 NYY; payout_potencial=32.94
+2026-08-05T13:16:59.729338+00:00,2026-08-05,CWS,BOS,home,20.00,1.760,,pending,desde foto Hondubet; ticket=5263952588; ganador incl extras; seleccion=1 BOS; payout_potencial=35.38
+2026-08-05T13:19:16.899983+00:00,2026-08-05,MIN,KC,away,20.00,2.050,,pending,desde foto Hondubet; ticket=5263956670; ganador incl extras; seleccion=2 MIN; payout_potencial=41.00
+2026-08-05T13:22:55.071535+00:00,2026-08-05,TOR,HOU,home,25.00,1.520,,pending,desde foto Hondubet; ticket=5263963632; ganador incl extras; seleccion=1 HOU; payout_potencial=38.16
+2026-08-05T13:28:50.910056+00:00,2026-08-05,TB,COL,away,20.00,1.620,,pending,desde foto Hondubet; ticket=5263975720; ganador incl extras; seleccion=2 TB; payout_potencial=32.50
+2026-08-05T13:32:19.668005+00:00,2026-08-05,LAA,BAL,home,20.00,1.800,,pending,desde foto Hondubet; ticket=5263937350; ganador incl extras; seleccion=1 BAL; payout_potencial=36.00
+2026-08-05T13:36:03.631925+00:00,2026-08-05,DET,SEA,away,20.00,2.250,,pending,desde foto Hondubet; ticket=5263989310; ganador incl extras; seleccion=2 DET; payout_potencial=45.00
+2026-08-05T13:44:15.407226+00:00,2026-08-05,ATH,CIN,home,20.00,1.660,,pending,desde foto Hondubet; ticket=5264008204; ganador incl extras; seleccion=1 CIN; payout_potencial=33.33
+2026-08-05T13:46:49.255046+00:00,2026-08-05,PIT,MIL,home,20.00,1.740,,pending,desde foto Hondubet; ticket=5264011497; ganador incl extras; seleccion=1 MIL; payout_potencial=34.81
+2026-08-05T13:48:59.106684+00:00,2026-08-05,LAD,CHC,away,20.00,2.100,,pending,desde foto Hondubet; ticket=5264014555; ganador incl extras; seleccion=2 LAD; payout_potencial=42.00

@@ -44,9 +44,12 @@ Ajusta la ruta del `.bat` a donde clonaste el repo. Edita el `.bat` si usas `.ve
 | Escribes | Que hace |
 |----------|----------|
 | `actualizar` | Senales pre-match / no apostar si ya inicio |
-| `aposte BOS LAD away 2.55 5` | Registra apuesta real |
+| `aposte BOS LAD away 2.55 25` | Registra apuesta real |
 | `gane BOS LAD` / `perdi BOS LAD` | Cierra resultado |
+| **Foto del ticket Hondubet** | Lee GANADO/PERDIDO, cuota, stake y actualiza el CSV |
 | `ayuda` | Ayuda |
+
+Si al mandar la foto no detecta si fue 1 o 2, reenviala con caption `1` o `2`.
 
 ## Estrategia (resumen)
 

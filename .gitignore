@@ -8,5 +8,7 @@ venv/
 data/*.csv
 data/*.db
 data/*.db-*
+# Forward test (sin secretos): sí versionar para ver comportamiento
+!data/forward_bets.csv
 .DS_Store
 Thumbs.db

@@ -1,16 +1,19 @@
-"""Escucha Telegram: actualizar / aposte / gane / perdi."""
+"""Escucha Telegram: actualizar / aposte / gane / perdi / fotos Hondubet."""
 
 from __future__ import annotations
 
 import os
 import re
+import tempfile
 import time
 from datetime import datetime, timezone
+from pathlib import Path
 
 import requests
 
 from mlb.bot import load_env_file, send_telegram
-from mlb.forward_log import FORWARD_CSV, log_bet, update_result
+from mlb.forward_log import FORWARD_CSV, apply_hondubet_ticket, log_bet, settle_latest_pending, update_result
+from mlb.hondubet_ticket import parse_ticket_image
 from mlb.status_check import build_actualizar_message
 
 load_env_file()
@@ -24,13 +27,18 @@ actualizar
   -> que SI / NO puedes apostar + value bets
 
 aposte VISITANTE LOCAL lado cuota stake
-  Ej: aposte BOS LAD away 2.55 5
+  Ej: aposte BOS LAD away 2.55 25
   lado = away|home|1|2
   (1=local/home, 2=visitante/away)
 
 gane VISITANTE LOCAL
 perdi VISITANTE LOCAL
   Ej: gane BOS LAD
+
+FOTO ticket Hondubet
+  -> pega la captura del ticket (GANADO/PERDIDO o pendiente)
+  -> el bot lee cuota, stake, equipos y actualiza el CSV
+  Tip: si no detecta 1/2, caption de la foto: 1  o  2
 
 hola / ayuda
   -> este mensaje
@@ -100,9 +108,8 @@ def handle_message(text: str) -> str:
             f"Lado: {side_txt} | Cuota: {odds} | Stake: L{stake:g}\n"
             f"Estado: pending\n"
             f"Archivo: {path.name}\n\n"
-            f"Cuando termine escribe:\n"
-            f"gane {away.upper()} {home.upper()}\n"
-            f"o: perdi {away.upper()} {home.upper()}"
+            f"Cuando termine: pega la foto del ticket\n"
+            f"o escribe: gane {away.upper()} {home.upper()}"
         )
 
     # gane BOS LAD  /  perdi BOS LAD
@@ -116,8 +123,7 @@ def handle_message(text: str) -> str:
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         n = update_result(away, home, today, result)
         if not n:
-            # intenta sin filtrar solo hoy: busca pending mas reciente de ese matchup
-            n = _settle_latest(away, home, result)
+            n = settle_latest_pending(away, home, result)
         if n:
             return (
                 f"Resultado actualizado: {away.upper()}@{home.upper()} -> {result}\n"
@@ -126,45 +132,63 @@ def handle_message(text: str) -> str:
             )
         return (
             f"No encontre apuesta pending de {away.upper()}@{home.upper()}.\n"
-            f"Primero: aposte {away.upper()} {home.upper()} away 2.55 5"
+            f"Pega la foto del ticket Hondubet o:\n"
+            f"aposte {away.upper()} {home.upper()} away 2.55 25"
         )
 
     return (
         "No entendi.\n\n"
         "Ejemplos:\n"
         "actualizar\n"
-        "aposte BOS LAD away 2.55 5\n"
+        "aposte BOS LAD away 2.55 25\n"
         "gane BOS LAD\n"
         "perdi BOS LAD\n"
+        "(o pega foto del ticket Hondubet)\n"
         "ayuda"
     )
 
 
-def _settle_latest(away: str, home: str, result: str) -> int:
-    if not FORWARD_CSV.exists():
-        return 0
-    import csv
+def _best_photo_file_id(msg: dict) -> str | None:
+    photos = msg.get("photo") or []
+    if photos:
+        # ultimo = mayor resolucion
+        return photos[-1].get("file_id")
+    doc = msg.get("document") or {}
+    mime = (doc.get("mime_type") or "").lower()
+    if mime.startswith("image/") and doc.get("file_id"):
+        return doc["file_id"]
+    return None
 
-    with FORWARD_CSV.open(encoding="utf-8") as f:
-        rows = list(csv.DictReader(f))
-    updated = 0
-    for row in reversed(rows):
-        if (
-            row["away"].upper() == away.upper()
-            and row["home"].upper() == home.upper()
-            and row["result"] == "pending"
-        ):
-            row["result"] = result
-            updated = 1
-            break
-    if updated:
-        from mlb.forward_log import FIELDNAMES
 
-        with FORWARD_CSV.open("w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=FIELDNAMES)
-            w.writeheader()
-            w.writerows(rows)
-    return updated
+def download_telegram_file(token: str, file_id: str, dest: Path) -> Path:
+    meta = requests.get(
+        f"https://api.telegram.org/bot{token}/getFile",
+        params={"file_id": file_id},
+        timeout=30,
+    ).json()
+    if not meta.get("ok"):
+        raise RuntimeError(f"getFile fallo: {meta}")
+    file_path = meta["result"]["file_path"]
+    url = f"https://api.telegram.org/file/bot{token}/{file_path}"
+    resp = requests.get(url, timeout=60)
+    resp.raise_for_status()
+    dest.write_bytes(resp.content)
+    return dest
+
+
+def handle_photo(token: str, file_id: str, caption: str = "") -> str:
+    suffix = ".jpg"
+    with tempfile.NamedTemporaryFile(prefix="hondubet_", suffix=suffix, delete=False) as tmp:
+        tmp_path = Path(tmp.name)
+    try:
+        download_telegram_file(token, file_id, tmp_path)
+        ticket = parse_ticket_image(tmp_path, caption=caption)
+        return apply_hondubet_ticket(ticket)
+    finally:
+        try:
+            tmp_path.unlink(missing_ok=True)
+        except OSError:
+            pass
 
 
 def run_listener(*, poll_seconds: int = 3) -> None:
@@ -172,7 +196,8 @@ def run_listener(*, poll_seconds: int = 3) -> None:
     url = f"https://api.telegram.org/bot{token}/getUpdates"
     offset = 0
     print("Listener Telegram activo.")
-    print("Comandos: actualizar | aposte ... | gane/perdi ... | ayuda")
+    print("Comandos: actualizar | aposte ... | gane/perdi ... | FOTO ticket | ayuda")
+    print(f"Forward CSV: {FORWARD_CSV}")
     print("Ctrl+C para detener.\n")
 
     boot = requests.get(url, params={"timeout": 0}, timeout=30).json()
@@ -197,8 +222,24 @@ def run_listener(*, poll_seconds: int = 3) -> None:
                 msg = item.get("message") or {}
                 chat = msg.get("chat") or {}
                 chat_id = str(chat.get("id", ""))
+                if chat_id != allowed_chat:
+                    continue
+
                 text = (msg.get("text") or "").strip()
-                if not text or chat_id != allowed_chat:
+                caption = (msg.get("caption") or "").strip()
+                file_id = _best_photo_file_id(msg)
+
+                if file_id:
+                    print(f"Foto recibida caption={caption!r}")
+                    try:
+                        reply = handle_photo(token, file_id, caption=caption)
+                    except Exception as exc:  # noqa: BLE001
+                        reply = f"No pude interpretar la foto.\n{exc}\n\nEscribe: ayuda"
+                    send_telegram(reply, chat_id=chat_id)
+                    print("Respondido (foto).")
+                    continue
+
+                if not text:
                     continue
 
                 print(f"Msg: {text!r}")
