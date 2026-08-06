@@ -17,3 +17,5 @@ logged_at,game_date,away,home,side,stake,decimal_odds,american_odds,result,notes
 2026-08-05T13:44:15.407226+00:00,2026-08-05,ATH,CIN,home,20.00,1.660,,win,desde foto Hondubet; ticket=5264008204; score=3:2; seleccion=1 CIN; payout=33.33; P~62.1%; edge~+1.8%; con; CERRADO
 2026-08-05T13:46:49.255046+00:00,2026-08-05,PIT,MIL,home,20.00,1.740,,win,desde foto Hondubet; ticket=5264011497; score=4:2; seleccion=1 MIL; payout=34.81; P~58.0%; edge~+0.6%; con; CERRADO
 2026-08-05T13:48:59.106684+00:00,2026-08-05,LAD,CHC,away,20.00,2.100,,loss,desde foto Hondubet; ticket=5264014555; score=7:6; seleccion=2 LAD; P~57.0%; edge~+9.4%; con; CERRADO
+2026-08-06T18:28:46.983431+00:00,2026-08-06,DET,SEA,away,25.00,2.050,,pending,desde foto Hondubet; ticket=5267976850; ganador incl extras; seleccion=2 DET; payout_potencial=51.25
+2026-08-06T18:31:56.274209+00:00,2026-08-06,MIN,KC,away,25.00,2.050,,pending,desde foto Hondubet; ticket=5268045979; ganador incl extras; seleccion=2 MIN; payout_potencial=51.25

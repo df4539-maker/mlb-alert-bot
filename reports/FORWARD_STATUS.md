@@ -25,25 +25,34 @@
 
 Baseline: win 55.9% · ROI +6.7%.
 
-## Card 2026-08-06 — MAÑANA (entrada temprana, edge >= 5%)
+## Card 2026-08-06 — estado tarde (PC bots)
 
-| # | Partido | Apostá | Lado | P modelo | Cuota modelo | Edge | Stake sug. |
-|---|---------|--------|------|----------|--------------|------|------------|
-| 1 | ATH @ CIN | **CIN** | **1** | 66.6% | 1.50 | +14.2% | L20 |
-| 2 | LAA @ BAL | **BAL** | **1** | 64.8% | 1.54 | +12.4% | L20 |
-| 3 | CWS @ BOS | **BOS** | **1** | 62.1% | 1.61 | +9.8% | L20 |
-| 4 | DET @ SEA | **DET** | **2** | 60.3% | 1.66 | +7.9% | L15–20 |
-| 5 | MIN @ KC | **MIN** | **2** | 58.8% | 1.70 | +6.4% | L15–20 |
-| 6 | PIT @ MIL | **MIL** | **1** | 57.9% | 1.73 | +5.5% | L15 |
+### Apostadas hoy (protocolo OK)
+| Partido | Lado | Cuota | Stake | P | Edge real | Ticket | Estado |
+|---------|------|-------|-------|---|-----------|--------|--------|
+| DET @ SEA | DET (2) | 2.05 | L25 | 60.3% | +11.5% | 5267976850 | ABIERTO |
+| MIN @ KC | MIN (2) | 2.05 | L25 | 58.8% | +10.0% | 5268045979 | ABIERTO |
 
-**Fuera del card mañana** (edge 3–5%; se pueden mirar más tarde si siguen >=3%): CHC +4.8%, ATL +3.8%, NYM +3.2%.
+### No apostadas (motivo)
+| Partido | Motivo |
+|---------|--------|
+| CIN / BAL / NYM / MIL / CHC | Ya iniciados o warmup al mediodía |
+| CWS @ BOS @1.54 | Edge real -2.8% (cara) |
+| MIA @ ATL @1.66 | Edge real -4.1% (cara) |
+| WSH @ PHI / SD @ AZ | Edge < 3% o negativo |
 
-### Reglas (pie de cuadro — validar siempre)
-1. Solo **CON** el modelo (P >= 50%). Nunca CONTRA.
-2. **Mañana:** solo si **edge >= 5%** (este cuadro).
-3. **Resto del día / contador 250:** mínimo **edge >= 3%**.
-4. Antes de apostar: mirar cuota Hondubet; si edge real baja del umbral, **saltar**.
-5. Stake **1–2% del bank**; solo PRE-MATCH.
-6. De noche: comparar este cuadro vs lo realmente apostado (fotos / tickets).
+### Posibles tarde (solo si mejora cuota)
+- BOS local: necesita ~1.69+ (edge>=3%)
+- ATL local: necesita ~1.88+ (edge>=3%)
 
-CSV: `data/forward_bets.csv` · Rutina: `reports/RUTINA.md` · Oficial cerrado: **9/250** (6W/3L, +43.15)
+### Reglas (pie)
+1. Solo CON (P>=50%). Nunca CONTRA.
+2. Manana: edge>=5%. Resto del dia / contador 250: edge>=3%.
+3. Si cuota Hondubet baja el umbral -> saltar.
+4. Solo PRE-MATCH.
+5. Stake 1-2% bank.
+6. Noche: cerrar DET/MIN y comparar vs card.
+
+Oficial cerrado previo: 9/250 · 6W/3L · +43.15
+CSV: data/forward_bets.csv · Rutina: reports/RUTINA.md
+
