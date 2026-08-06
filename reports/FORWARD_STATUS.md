@@ -2,9 +2,10 @@
 
 ## Filtro oficial (FIJO)
 
-- Solo cuenta / solo apostar: **P modelo >= 50% (CON)** y **edge >= +3%** vs cuota real.
-- CONTRA o CON sin value: fuera de protocolo.
-- Meta **250** ops oficiales.
+- **CON** (P >= 50%). CONTRA: nunca.
+- **Mañana (entrada temprana):** edge **>= +5%**.
+- **Resto del día / contador 250:** edge **>= +3%**.
+- Meta **250** ops = CON + edge>=3%.
 
 ## Oficiales cerradas (CON + edge>=3%)
 
@@ -24,20 +25,25 @@
 
 Baseline: win 55.9% · ROI +6.7%.
 
-## Card 2026-08-06
+## Card 2026-08-06 — MAÑANA (entrada temprana, edge >= 5%)
 
-| # | Partido | Apostá | Lado | P | Cuota modelo | Edge | Stake sug. |
-|---|---------|--------|------|---|--------------|------|------------|
+| # | Partido | Apostá | Lado | P modelo | Cuota modelo | Edge | Stake sug. |
+|---|---------|--------|------|----------|--------------|------|------------|
 | 1 | ATH @ CIN | **CIN** | **1** | 66.6% | 1.50 | +14.2% | L20 |
 | 2 | LAA @ BAL | **BAL** | **1** | 64.8% | 1.54 | +12.4% | L20 |
 | 3 | CWS @ BOS | **BOS** | **1** | 62.1% | 1.61 | +9.8% | L20 |
-| 4 | DET @ SEA | **DET** | **2** | 60.3% | 1.66 | +7.9% | L15 |
-| 5 | MIN @ KC | **MIN** | **2** | 58.8% | 1.70 | +6.4% | L15 |
+| 4 | DET @ SEA | **DET** | **2** | 60.3% | 1.66 | +7.9% | L15–20 |
+| 5 | MIN @ KC | **MIN** | **2** | 58.8% | 1.70 | +6.4% | L15–20 |
 | 6 | PIT @ MIL | **MIL** | **1** | 57.9% | 1.73 | +5.5% | L15 |
-| 7 | TOR @ CHC | **CHC** | **1** | 57.2% | 1.75 | +4.8% | L15 |
-| 8 | MIA @ ATL | **ATL** | **1** | 56.1% | 1.78 | +3.8% | L15 |
-| 9 | NYM @ CLE | **NYM** | **2** | 55.6% | 1.80 | +3.2% | L15 |
 
-Verificar cuota Hondubet: si edge real < 3%, saltar. Prioridad bank chico: 1-5.
+**Fuera del card mañana** (edge 3–5%; se pueden mirar más tarde si siguen >=3%): CHC +4.8%, ATL +3.8%, NYM +3.2%.
 
-CSV: `data/forward_bets.csv` · Rutina: `reports/RUTINA.md`
+### Reglas (pie de cuadro — validar siempre)
+1. Solo **CON** el modelo (P >= 50%). Nunca CONTRA.
+2. **Mañana:** solo si **edge >= 5%** (este cuadro).
+3. **Resto del día / contador 250:** mínimo **edge >= 3%**.
+4. Antes de apostar: mirar cuota Hondubet; si edge real baja del umbral, **saltar**.
+5. Stake **1–2% del bank**; solo PRE-MATCH.
+6. De noche: comparar este cuadro vs lo realmente apostado (fotos / tickets).
+
+CSV: `data/forward_bets.csv` · Rutina: `reports/RUTINA.md` · Oficial cerrado: **9/250** (6W/3L, +43.15)

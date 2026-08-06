@@ -16,12 +16,12 @@ Repo: https://github.com/df4539-maker/mlb-alert-bot
 1. Usuario pasa **saldo** + “dame el día”.
 2. Bot/agente arma top **5–10** value del mismo día (PRE-MATCH).
 3. Cuadro: partido, lado 1/2, P modelo, edge, stake sugerido.
-4. Reglas **FIJAS** (siempre):
-   - Solo apostar / contar si **P ≥ 50% (CON)** **y** **edge ≥ +3%** vs cuota real.
-   - CON pero edge &lt; 3% → no jugar (cara). CONTRA → nunca.
-   - Stake **1–2% del bank**.
-   - Máx. 5 picks si bank chico; 8–10 si hay margen.
-   - Meta **250** = solo ops **CON + edge≥3%**.
+4. Reglas **FIJAS** (siempre al pie del cuadro):
+   - Solo **CON** (P ≥ 50%). CONTRA → nunca.
+   - **Mañana (6–8 AM):** edge **≥ +5%** para entrar ya.
+   - **Resto del día / contador 250:** edge **≥ +3%**.
+   - Stake **1–2% del bank**. Máx. 5 (bank chico) u 8–10.
+   - Meta **250** = CON + edge≥3%.
 
 ### Noche 20:00–21:00
 1. Cerrar ganó/perdió (foto / `gane` / `perdi`).

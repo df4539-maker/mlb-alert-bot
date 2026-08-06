@@ -13,12 +13,13 @@ Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, si
 2. Armar top **5–10** value del **mismo día**, PRE-MATCH only.
 3. En el cuadro incluir siempre: partido, lado (1/2), P modelo, edge vs cuota ref y vs cuota si la hay, stake sugerido.
 4. **Recordar en la respuesta** estas reglas (breve, al inicio o al final):
-   - **FILTRO FIJO (obligatorio):** solo recomendar/contar si **P modelo ≥ 50% (CON)** **y** **edge ≥ +3%** vs cuota real (`P − 1/cuota`).
-   - Si es CON pero edge &lt; 3% (cara) → **NO** incluir en el listado de apuesta ni en el contador 250.
-   - Si P &lt; 50% (CONTRA) → **NUNCA**.
-   - Stake **1–2% del bank** (ej. L500→L5–10; L1000→L10–20); no all-in; no subir solo por una gane.
-   - Máx. picks: **5** si bank chico, **8–10** si hay margen; no llenar cupo por llenar.
-   - Contador hacia **250** = solo operaciones **CON + edge≥3%** cerradas.
+   - **FILTRO FIJO:** solo **P ≥ 50% (CON)**. CONTRA → nunca.
+   - **Mañana temprano (card 6–8 AM):** solo listar/apostar si **edge ≥ +5%** vs ref o cuota real.
+   - **Resto del día / contador 250:** mínimo **edge ≥ +3%** (CON + value).
+   - Si CON pero bajo el umbral del momento → no incluir en el cuadro de apuesta.
+   - Stake **1–2% del bank**; máx. 5 si bank chico, 8–10 si hay margen.
+   - **Al pie de cada cuadro de picks:** repetir siempre estas reglas (para validar).
+   - Contador 250 = ops **CON + edge≥3%** (las de mañana ≥5% también cuentan si ≥3%).
 5. Separar ya apostadas de disponibles. Registrar tickets cuando mande fotos/`aposte`.
 
 ## Cuando el usuario actualice de noche (~8–9 PM)
