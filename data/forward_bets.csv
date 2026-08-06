@@ -1,19 +1,19 @@
 logged_at,game_date,away,home,side,stake,decimal_odds,american_odds,result,notes
 2026-08-05T18:09:00.428180+00:00,2026-08-02,BOS,LAD,away,25.00,2.550,,win,ticket=5256503135; #1; P=60.7%; edge=+21.5%; con
 2026-08-05T18:09:00.428180+00:00,2026-08-03,TB,COL,home,10.00,1.550,,win,ticket=5259564754; #2; P=30.6%; edge=-33.9%; contra
-2026-08-05T18:09:00.428180+00:00,2026-08-03,PIT,MIL,home,10.00,1.640,,loss,ticket=5259490664; #3; P=55.8%; edge=-5.1%; con
-2026-08-05T18:09:00.428180+00:00,2026-08-03,LAD,CHC,away,10.00,1.800,,loss,ticket=5259506896; #4; P=56.0%; edge=+0.4%; con
-2026-08-05T18:09:00.428180+00:00,2026-08-03,STL,NYY,home,10.00,1.450,,loss,viaje#5; NYY home; P=57.2%; edge=-11.8%; con
-2026-08-05T18:09:00.428180+00:00,2026-08-04,ATH,CIN,away,20.00,2.150,,loss,viaje#6; ATH away; P=37.2%; edge=-9.3%; contra
+2026-08-05T18:09:00.428180+00:00,2026-08-03,PIT,MIL,home,10.00,1.640,,loss,desde foto Hondubet; ticket=5259490664; score=3:4; #3; P=55.8%; edge=-5.1%; con
+2026-08-05T18:09:00.428180+00:00,2026-08-03,LAD,CHC,away,10.00,1.800,,loss,desde foto Hondubet; ticket=5259506896; score=10:5; #4; P=56.0%; edge=+0.4%; con
+2026-08-05T18:09:00.428180+00:00,2026-08-03,STL,NYY,home,10.00,1.450,,loss,desde foto Hondubet; ticket=5258976400; score=7:13; viaje#5; NYY home; P=57.2%; edge=-11.8%; con
+2026-08-05T18:09:00.428180+00:00,2026-08-04,ATH,CIN,away,20.00,2.150,,loss,desde foto Hondubet; ticket=5262070040; score=5:4; #6; ATH away; P=37.2%; edge=-9.3%; contra
 2026-08-05T18:09:00.428180+00:00,2026-08-04,LAA,BAL,home,10.00,1.760,,win,viaje#7; BAL home; P=60.7%; edge=+3.9%; con
-2026-08-05T18:09:00.428180+00:00,2026-08-04,TOR,HOU,home,10.00,1.800,,win,viaje#8; HOU home; P=57.3%; edge=+1.7%; con
-2026-08-05T13:13:35.772063+00:00,2026-08-05,STL,NYY,home,20.00,1.640,,pending,desde foto Hondubet; ticket=5263943929; ganador incl extras; seleccion=1 NYY; payout_potencial=32.94
-2026-08-05T13:16:59.729338+00:00,2026-08-05,CWS,BOS,home,20.00,1.760,,pending,desde foto Hondubet; ticket=5263952588; ganador incl extras; seleccion=1 BOS; payout_potencial=35.38
-2026-08-05T13:19:16.899983+00:00,2026-08-05,MIN,KC,away,20.00,2.050,,pending,desde foto Hondubet; ticket=5263956670; ganador incl extras; seleccion=2 MIN; payout_potencial=41.00
-2026-08-05T13:22:55.071535+00:00,2026-08-05,TOR,HOU,home,25.00,1.520,,pending,desde foto Hondubet; ticket=5263963632; ganador incl extras; seleccion=1 HOU; payout_potencial=38.16
-2026-08-05T13:28:50.910056+00:00,2026-08-05,TB,COL,away,20.00,1.620,,pending,desde foto Hondubet; ticket=5263975720; ganador incl extras; seleccion=2 TB; payout_potencial=32.50
-2026-08-05T13:32:19.668005+00:00,2026-08-05,LAA,BAL,home,20.00,1.800,,pending,desde foto Hondubet; ticket=5263937350; ganador incl extras; seleccion=1 BAL; payout_potencial=36.00
-2026-08-05T13:36:03.631925+00:00,2026-08-05,DET,SEA,away,20.00,2.250,,pending,desde foto Hondubet; ticket=5263989310; ganador incl extras; seleccion=2 DET; payout_potencial=45.00
-2026-08-05T13:44:15.407226+00:00,2026-08-05,ATH,CIN,home,20.00,1.660,,pending,desde foto Hondubet; ticket=5264008204; ganador incl extras; seleccion=1 CIN; payout_potencial=33.33
-2026-08-05T13:46:49.255046+00:00,2026-08-05,PIT,MIL,home,20.00,1.740,,pending,desde foto Hondubet; ticket=5264011497; ganador incl extras; seleccion=1 MIL; payout_potencial=34.81
-2026-08-05T13:48:59.106684+00:00,2026-08-05,LAD,CHC,away,20.00,2.100,,pending,desde foto Hondubet; ticket=5264014555; ganador incl extras; seleccion=2 LAD; payout_potencial=42.00
+2026-08-05T18:09:00.428180+00:00,2026-08-04,TOR,HOU,home,10.00,1.800,,win,desde foto Hondubet; ticket=5259548543; score=7:2; PA early payout; #8; P=57.3%; edge=+1.7%; con
+2026-08-05T13:13:35.772063+00:00,2026-08-05,STL,NYY,home,20.00,1.640,,loss,desde foto Hondubet; ticket=5263943929; score=3:1 STL gana; seleccion=1 NYY; P~57.2%; edge~-3.8%; con; CERRADO MLB Final
+2026-08-05T13:16:59.729338+00:00,2026-08-05,CWS,BOS,home,20.00,1.760,,win,desde foto Hondubet; ticket=5263952588; score=4:0; seleccion=1 BOS; payout=35.38; P~56.5%; edge~-0.3%; con; CERRADO
+2026-08-05T13:19:16.899983+00:00,2026-08-05,MIN,KC,away,20.00,2.050,,loss,desde foto Hondubet; ticket=5263956670; score=2:1; seleccion=2 MIN; P~67.2%; edge~+18.5%; con; CERRADO
+2026-08-05T13:22:55.071535+00:00,2026-08-05,TOR,HOU,home,25.00,1.520,,loss,desde foto Hondubet; ticket=5263963632; score=4:5; seleccion=1 HOU; P~57.3%; edge~-8.5%; con; CERRADO
+2026-08-05T13:28:50.910056+00:00,2026-08-05,TB,COL,away,20.00,1.620,,win,desde foto Hondubet; ticket=5263975720; score=0:4; seleccion=2 TB; payout=32.50; P~69.4%; edge~+7.7%; con; CERRADO
+2026-08-05T13:32:19.668005+00:00,2026-08-05,LAA,BAL,home,20.00,1.800,,win,desde foto Hondubet; ticket=5263937350; score=5:2; seleccion=1 BAL; payout=36.00; P~64.1%; edge~+8.6%; con; CERRADO
+2026-08-05T13:36:03.631925+00:00,2026-08-05,DET,SEA,away,20.00,2.250,,loss,desde foto Hondubet; ticket=5263989310; score=4:2; seleccion=2 DET; P~62.6%; edge~+18.2%; con; CERRADO
+2026-08-05T13:44:15.407226+00:00,2026-08-05,ATH,CIN,home,20.00,1.660,,win,desde foto Hondubet; ticket=5264008204; score=3:2; seleccion=1 CIN; payout=33.33; P~62.1%; edge~+1.8%; con; CERRADO
+2026-08-05T13:46:49.255046+00:00,2026-08-05,PIT,MIL,home,20.00,1.740,,win,desde foto Hondubet; ticket=5264011497; score=4:2; seleccion=1 MIL; payout=34.81; P~58.0%; edge~+0.6%; con; CERRADO
+2026-08-05T13:48:59.106684+00:00,2026-08-05,LAD,CHC,away,20.00,2.100,,loss,desde foto Hondubet; ticket=5264014555; score=7:6; seleccion=2 LAD; P~57.0%; edge~+9.4%; con; CERRADO
