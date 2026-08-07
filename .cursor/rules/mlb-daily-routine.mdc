@@ -29,7 +29,11 @@ Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, si
 3. Comparar vs baseline (win 55.9%, ROI +6.7%) — enfatizar muestra chica.
 4. Push a GitHub si pide actualizar el repo (sin `.env`).
 
-## Buckets al reportar
+## Nombres fijos que usa el usuario
+
+- **cuadro baseline** → tabla Baseline | Todas | Solo CON | CON+edge≥3% (oficial): n, win rate, ROI, neto. Incluir contador oficial X/250 y nota de muestra chica.
+- **cuadro eventos** → detalle partido a partido (P, edge, con/contra, resultado, profit).
+- **dame el día / card** → picks del día con reglas al pie.
 
 - **Oficial (único que cuenta a 250):** **CON + value** → P≥50% **y** edge≥3% vs cuota real.
 - El resto (CON sin value / CONTRA) se puede listar como “fuera de protocolo”, no entra al contador ni a la decisión.
