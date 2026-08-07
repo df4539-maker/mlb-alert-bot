@@ -16,11 +16,12 @@ Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, si
    - **FILTRO FIJO:** solo **P ≥ 50% (CON)**. CONTRA → nunca.
    - **Mañana temprano (card 6–8 AM):** solo listar/apostar si **edge ≥ +5%** vs ref o cuota real.
    - **Resto del día / contador 250:** mínimo **edge ≥ +3%** (CON + value).
+   - **Preferencia del usuario (no cambia el filtro oficial):** priorizar / marcar **edge ≥ +10%**. Seguir listando las de 3–10% (o 5–10% en mañana), pero en cada card indicar claro: **preferimos ≥ +10%**.
    - Si CON pero bajo el umbral del momento → no incluir en el cuadro de apuesta.
    - Stake **1–2% del bank**; máx. 5 si bank chico, 8–10 si hay margen.
-   - **Al pie de cada cuadro de picks:** repetir siempre estas reglas (para validar).
+   - **Al pie de cada cuadro de picks:** repetir siempre estas reglas (para validar) + la preferencia ≥10%.
    - Contador 250 = ops **CON + edge≥3%** (las de mañana ≥5% también cuentan si ≥3%).
-5. Separar ya apostadas de disponibles. Registrar tickets cuando mande fotos/`aposte`.
+5. Separar ya apostadas de disponibles. En el cuadro marcar **PREFERIDA (≥10%)** vs resto. Registrar tickets cuando mande fotos/`aposte`.
 
 ## Cuando el usuario actualice de noche (~8–9 PM)
 

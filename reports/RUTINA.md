@@ -20,6 +20,7 @@ Repo: https://github.com/df4539-maker/mlb-alert-bot
    - Solo **CON** (P ≥ 50%). CONTRA → nunca.
    - **Mañana (6–8 AM):** edge **≥ +5%** para entrar ya.
    - **Resto del día / contador 250:** edge **≥ +3%**.
+   - **Preferencia:** priorizar **edge ≥ +10%**; listar igual el resto del filtro.
    - Stake **1–2% del bank**. Máx. 5 (bank chico) u 8–10.
    - Meta **250** = CON + edge≥3%.
 
