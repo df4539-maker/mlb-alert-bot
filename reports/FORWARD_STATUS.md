@@ -29,39 +29,42 @@ Baseline backtest: win 55.9% · ROI +6.7%. Muestra chica.
 ## Card 2026-08-06 — cerrado
 DET/MIN ambas W. Ver CSV.
 
-## Card 2026-08-07 — estado tarde (PC bots)
+## Card 2026-08-07 — CERRADO
+3W/3L · L120 · neto ≈ −20.97. Preferidas ≥10%: 2W/2L ≈ −8.24. Ver CSV.
+Oficial tras el día: **15/250** · 9W/6L · ROI +15.2% · neto +46.38.
 
-**Preferencia:** edge ≥ +10% (filtro oficial sigue ≥3%).
+## Card 2026-08-08 — mañana ~05:00 HN (PC bots)
 
-### Apostadas hoy (ABIERTO)
-| Partido | Lado | Cuota | Stake | P | Edge real | Ticket | Preferida |
-|---------|------|-------|-------|---|-----------|--------|-----------|
-| ATH @ BOS | BOS (1) | 1.36 | L20 | 82.0% | +8.5% | 5271192570 | **GANÓ** (+7.27) score 13:1 PA EP |
-| CHC @ KC | CHC (2) | 1.58 | L20 | 74.2% | +10.9% | 5271202617 | **GANÓ** (+11.76) score 4:6 PA |
-| DET @ SF | DET (2) | 1.76 | L20 | 68.6% | +11.8% | 5271207680 | **PERDIÓ** (−20) score 5:2 |
-| TB @ SEA | TB (2) | 2.00 | L20 | 66.9% | +16.9% | 5271213441 | **GANÓ** (+20) score 1:2 |
-| CIN @ WSH | CIN (2) | 2.00 | L20 | 65.6% | +15.6% | 5271222953 | **PERDIÓ** (−20) score 5:3 |
-| ATL @ NYY | ATL (2) | 1.74 | L20 | 63.3% | +5.8% | 5271228155 | **PERDIÓ** (−20) score 2:3 |
+**Preferencia:** edge ≥ +10%. Filtro mañana ≥ +5% · día/contador ≥ +3%. 1=local 2=visita.
 
-Hoy: L120 · 6 tickets · 4 preferidas ≥10% + 2 ya puestas &lt;10%.
+### Preferidas (≥ +10%) — priorizar
+| # | Partido | Apuesta | P | Cuota mod | Edge | Hora HN | Stake |
+|---|---------|---------|---|-----------|------|---------|-------|
+| 1 | ATH @ BOS | **1 BOS** | 82.6% | 1.21 | +30.2% | 14:10 | L20 |
+| 2 | CHC @ KC | **2 CHC** | 75.3% | 1.33 | +22.9% | 17:10 | L20 |
+| 3 | TB @ SEA | **2 TB** | 68.5% | 1.46 | +16.1% | 19:50 | L20 |
+| 4 | DET @ SF | **2 DET** | 65.1% | 1.54 | +12.7% | 17:15 | L20 |
 
-### No se apuestan (edge &lt; +10%)
-| Partido | Lado card | Edge mod* | Motivo |
-|---------|-----------|-----------|--------|
-| HOU @ SD | HOU (2) | +7.3% | abajo de 10% — no apostar |
-| MIN @ MIL | MIL (1) | +6.7% | abajo de 10% — no apostar |
-| BAL @ TEX | BAL (2) | +6.5% | abajo de 10% — no apostar |
-| NYM @ PIT | NYM (2) | +4.5% | abajo de 10% — no apostar |
-| LAA @ MIA | MIA (1) | +4.2% | abajo de 10% — no apostar |
+### Listadas +5–10% — no apostar (preferencia &lt;10%)
+| # | Partido | Apuesta | P | Edge | Hora HN |
+|---|---------|---------|---|------|---------|
+| 5 | CIN @ WSH | **2 CIN** | 62.1% | +9.7% | 16:45 |
+| 6 | HOU @ SD | **2 HOU** | 61.9% | +9.5% | 17:15 |
+| 7 | ATL @ NYY | **2 ATL** | 59.9% | +7.5% | 13:05 |
+| 8 | NYM @ PIT | **2 NYM** | 59.3% | +6.9% | 16:40 |
 
-\*vs ref -110. Fuera de protocolo (&lt;3%): TOR@PHI, CLE@CWS, COL@STL, LAD@AZ.
+### Cola día +3–5% — no apostar (&lt;10%)
+MIN@MIL **1 MIL** +3.4% · BAL@TEX **2 BAL** +3.2%
+
+### Fuera de protocolo
+LAA@MIA · TOR@PHI · COL@STL · CLE@CWS · LAD@AZ
 
 ### Reglas (pie)
 1. Solo CON (P>=50%). Nunca CONTRA.
 2. Manana: edge>=5%. Resto del dia / contador 250: edge>=3%.
-3. Preferencia usuario: priorizar edge>=+10%; el resto listar pero no apostar si &lt;10%.
-4. Si cuota Hondubet baja el umbral -> saltar.
-5. Solo PRE-MATCH. Stake 1-2% bank.
+3. Preferencia: apostar solo si edge real >=+10%; listar el resto.
+4. edge = P − 1/cuota_real Hondubet. Si acorta -> skip.
+5. Solo PRE-MATCH. Stake 1-2% bank. Oficial 15/250.
 
 CSV: data/forward_bets.csv · Rutina: reports/RUTINA.md
 
