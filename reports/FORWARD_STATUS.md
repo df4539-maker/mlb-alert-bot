@@ -22,9 +22,9 @@
 | 8 | 2026-08-05 | ATH @ CIN | CIN(1) | 1.66 | L20 | 64.8% | +4.5% | GANÓ | +13.20 |
 | 9 | 2026-08-05 | LAD @ CHC | LAD(2) | 2.10 | L20 | 52.8% | +5.2% | PERDIÓ | -20.00 |
 
-**Oficial:** 6W / 3L · stake L175 · neto **+43.15** · ROI **+24.7%** · contador **9 / 250**
+**Oficial cerrado:** 9W / 6L · stake L305 · neto **+46.38** · ROI **+15.2%** · hit **60.0%** · contador **15 / 250**
 
-Baseline: win 55.9% · ROI +6.7%.
+Baseline backtest: win 55.9% · ROI +6.7%. Muestra chica.
 
 ## Card 2026-08-06 — cerrado
 DET/MIN ambas W. Ver CSV.
@@ -36,12 +36,12 @@ DET/MIN ambas W. Ver CSV.
 ### Apostadas hoy (ABIERTO)
 | Partido | Lado | Cuota | Stake | P | Edge real | Ticket | Preferida |
 |---------|------|-------|-------|---|-----------|--------|-----------|
-| ATH @ BOS | BOS (1) | 1.36 | L20 | 82.0% | +8.5% | 5271192570 | no (&lt;10%) |
-| CHC @ KC | CHC (2) | 1.58 | L20 | 74.2% | +10.9% | 5271202617 | sí |
-| DET @ SF | DET (2) | 1.76 | L20 | 68.6% | +11.8% | 5271207680 | sí |
-| TB @ SEA | TB (2) | 2.00 | L20 | 66.9% | +16.9% | 5271213441 | sí |
-| CIN @ WSH | CIN (2) | 2.00 | L20 | 65.6% | +15.6% | 5271222953 | sí |
-| ATL @ NYY | ATL (2) | 1.74 | L20 | 63.3% | +5.8% | 5271228155 | no (&lt;10%) |
+| ATH @ BOS | BOS (1) | 1.36 | L20 | 82.0% | +8.5% | 5271192570 | **GANÓ** (+7.27) score 13:1 PA EP |
+| CHC @ KC | CHC (2) | 1.58 | L20 | 74.2% | +10.9% | 5271202617 | **GANÓ** (+11.76) score 4:6 PA |
+| DET @ SF | DET (2) | 1.76 | L20 | 68.6% | +11.8% | 5271207680 | **PERDIÓ** (−20) score 5:2 |
+| TB @ SEA | TB (2) | 2.00 | L20 | 66.9% | +16.9% | 5271213441 | **GANÓ** (+20) score 1:2 |
+| CIN @ WSH | CIN (2) | 2.00 | L20 | 65.6% | +15.6% | 5271222953 | **PERDIÓ** (−20) score 5:3 |
+| ATL @ NYY | ATL (2) | 1.74 | L20 | 63.3% | +5.8% | 5271228155 | **PERDIÓ** (−20) score 2:3 |
 
 Hoy: L120 · 6 tickets · 4 preferidas ≥10% + 2 ya puestas &lt;10%.
 
