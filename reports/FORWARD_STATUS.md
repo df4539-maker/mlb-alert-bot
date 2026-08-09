@@ -22,7 +22,7 @@
 | 8 | 2026-08-05 | ATH @ CIN | CIN(1) | 1.66 | L20 | 64.8% | +4.5% | GANÓ | +13.20 |
 | 9 | 2026-08-05 | LAD @ CHC | LAD(2) | 2.10 | L20 | 52.8% | +5.2% | PERDIÓ | -20.00 |
 
-**Oficial cerrado:** 9W / 6L · stake L305 · neto **+46.38** · ROI **+15.2%** · hit **60.0%** · contador **15 / 250**
+**Oficial cerrado:** 10W / 6L · stake L330 · neto **+71.38** · ROI **+21.6%** · hit **62.5%** · contador **16 / 250**
 
 Baseline backtest: win 55.9% · ROI +6.7%. Muestra chica.
 
@@ -33,7 +33,11 @@ DET/MIN ambas W. Ver CSV.
 3W/3L · L120 · neto ≈ −20.97. Preferidas ≥10%: 2W/2L ≈ −8.24. Ver CSV.
 Oficial tras el día: **15/250** · 9W/6L · ROI +15.2% · neto +46.38.
 
-## Card 2026-08-08 — mañana ~05:00 HN (PC bots)
+## Card 2026-08-08 — CERRADO
+TB@SEA **2 TB** @2.00 L25 ticket 5276132784 → **GANÓ** (+25) score 3:2. Preferida +18.5%.
+Oficial tras el día: **16/250** · 10W/6L · ROI +21.6% · neto +71.38.
+
+## Card 2026-08-09 — mañana ~09:40 HN (PC bots)
 
 **Preferencia:** edge ≥ +10%. Filtro mañana ≥ +5% · día/contador ≥ +3%. 1=local 2=visita.
 
@@ -64,7 +68,7 @@ LAA@MIA · TOR@PHI · COL@STL · CLE@CWS · LAD@AZ
 2. Manana: edge>=5%. Resto del dia / contador 250: edge>=3%.
 3. Preferencia: apostar solo si edge real >=+10%; listar el resto.
 4. edge = P − 1/cuota_real Hondubet. Si acorta -> skip.
-5. Solo PRE-MATCH. Stake 1-2% bank. Oficial 15/250.
+5. Solo PRE-MATCH. Stake 1-2% bank. Oficial 16/250.
 
 CSV: data/forward_bets.csv · Rutina: reports/RUTINA.md
 
