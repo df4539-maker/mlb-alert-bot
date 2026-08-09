@@ -37,38 +37,23 @@ Oficial tras el día: **15/250** · 9W/6L · ROI +15.2% · neto +46.38.
 TB@SEA **2 TB** @2.00 L25 ticket 5276132784 → **GANÓ** (+25) score 3:2. Preferida +18.5%.
 Oficial tras el día: **16/250** · 10W/6L · ROI +21.6% · neto +71.38.
 
-## Card 2026-08-09 — mañana ~09:40 HN (PC bots)
+## Card 2026-08-09 — abiertas (PC bots) bank L1543 · stake L25 (1.62%)
 
-**Preferencia:** edge ≥ +10%. Filtro mañana ≥ +5% · día/contador ≥ +3%. 1=local 2=visita.
+| Partido | Lado | Cuota | Stake | P | Edge real | Hora HN | Ticket | Estado |
+|---------|------|-------|-------|---|-----------|---------|--------|--------|
+| ATH @ BOS | BOS (1) | 1.50 | L25 | 79.6% | +12.9% | 11:35 | 5278496163 | ABIERTO |
+| CHC @ KC | CHC (2) | 1.60 | L25 | 72.0% | +9.5% | 12:10 | 5278507272 | ABIERTO (&lt;10%) |
+| DET @ SF | DET (2) | 1.80 | L25 | 66.9% | +11.3% | 14:05 | 5278514228 | ABIERTO |
+| TB @ SEA | TB (2) | 1.90 | L25 | 70.1% | +17.5% | 14:10 | 5278524237 | ABIERTO |
 
-### Preferidas (≥ +10%) — priorizar
-| # | Partido | Apuesta | P | Cuota mod | Edge | Hora HN | Stake |
-|---|---------|---------|---|-----------|------|---------|-------|
-| 1 | ATH @ BOS | **1 BOS** | 82.6% | 1.21 | +30.2% | 14:10 | L20 |
-| 2 | CHC @ KC | **2 CHC** | 75.3% | 1.33 | +22.9% | 17:10 | L20 |
-| 3 | TB @ SEA | **2 TB** | 68.5% | 1.46 | +16.1% | 19:50 | L20 |
-| 4 | DET @ SF | **2 DET** | 65.1% | 1.54 | +12.7% | 17:15 | L20 |
-
-### Listadas +5–10% — no apostar (preferencia &lt;10%)
-| # | Partido | Apuesta | P | Edge | Hora HN |
-|---|---------|---------|---|------|---------|
-| 5 | CIN @ WSH | **2 CIN** | 62.1% | +9.7% | 16:45 |
-| 6 | HOU @ SD | **2 HOU** | 61.9% | +9.5% | 17:15 |
-| 7 | ATL @ NYY | **2 ATL** | 59.9% | +7.5% | 13:05 |
-| 8 | NYM @ PIT | **2 NYM** | 59.3% | +6.9% | 16:40 |
-
-### Cola día +3–5% — no apostar (&lt;10%)
-MIN@MIL **1 MIL** +3.4% · BAL@TEX **2 BAL** +3.2%
-
-### Fuera de protocolo
-LAA@MIA · TOR@PHI · COL@STL · CLE@CWS · LAD@AZ
+Hoy: L100 · 4 tickets. Preferidas ≥10%: BOS/DET/TB. Tanking: `tanking_baseline.html` / `python scripts/plot_tanking_baseline.py --bank SALDO`.
 
 ### Reglas (pie)
 1. Solo CON (P>=50%). Nunca CONTRA.
 2. Manana: edge>=5%. Resto del dia / contador 250: edge>=3%.
-3. Preferencia: apostar solo si edge real >=+10%; listar el resto.
-4. edge = P − 1/cuota_real Hondubet. Si acorta -> skip.
-5. Solo PRE-MATCH. Stake 1-2% bank. Oficial 16/250.
+3. Preferencia: apostar edge real >=+10%; listar el resto.
+4. Stake 1-2% bank · tope L25. Solo PRE-MATCH.
+5. Oficial cerrado previo: 16/250 · 10W/6L · +71.38.
 
 CSV: data/forward_bets.csv · Rutina: reports/RUTINA.md
 

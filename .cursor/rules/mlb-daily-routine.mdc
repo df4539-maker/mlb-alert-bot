@@ -16,12 +16,14 @@ Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, si
    - **FILTRO FIJO:** solo **P ≥ 50% (CON)**. CONTRA → nunca.
    - **Mañana temprano (card 6–8 AM):** solo listar/apostar si **edge ≥ +5%** vs ref o cuota real.
    - **Resto del día / contador 250:** mínimo **edge ≥ +3%** (CON + value).
+   - Stake **1–2% del bank** (usuario pasa saldo Hondubet). **Tope duro por apuesta: L25** (máximo hasta ahora).
+   - Con bank actual, si 2% < L25 → usar el % (redondear a L5/L10); L25 solo cuando el bank lo aguante sin pasar ~2–3%.
    - **Preferencia del usuario (no cambia el filtro oficial):** priorizar / marcar **edge ≥ +10%**. Seguir listando las de 3–10% (o 5–10% en mañana), pero en cada card indicar claro: **preferimos ≥ +10%**.
    - Si CON pero bajo el umbral del momento → no incluir en el cuadro de apuesta.
-   - Stake **1–2% del bank**; máx. 5 si bank chico, 8–10 si hay margen.
-   - **Al pie de cada cuadro de picks:** repetir siempre estas reglas (para validar) + la preferencia ≥10%.
+   - Máx. ops del día: cuidar que la suma de stakes no coma >~8–10% del bank.
+   - **Al pie de cada cuadro de picks:** repetir siempre estas reglas (para validar) + la preferencia ≥10% + bank/% riesgo si lo dio.
    - Contador 250 = ops **CON + edge≥3%** (las de mañana ≥5% también cuentan si ≥3%).
-5. Separar ya apostadas de disponibles. En el cuadro marcar **PREFERIDA (≥10%)** vs resto. Registrar tickets cuando mande fotos/`aposte`.
+5. Separar ya apostadas de disponibles. En el cuadro marcar **PREFERIDA (≥10%)** vs resto. Stake sugerido con tope L25. Registrar tickets cuando mande fotos/`aposte`.
 
 ## Cuando el usuario actualice de noche (~8–9 PM)
 
@@ -33,6 +35,7 @@ Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, si
 ## Nombres fijos que usa el usuario
 
 - **cuadro baseline** → tabla Baseline | Todas | Solo CON | CON+edge≥3% (oficial): n, win rate, ROI, neto. Incluir contador oficial X/250 y nota de muestra chica.
+- **grafico baseline / tanking** → regenerar `scripts/plot_tanking_baseline.py` (opcional `--bank SALDO`) y abrir/guardar HTML en `C:\Documentos C\Apuestas deportivas\tanking_baseline.html` (curvas equity: Todas, Solo CON, oficial, preferida≥10%).
 - **cuadro eventos** → detalle partido a partido (P, edge, con/contra, resultado, profit).
 - **dame el día / card** → picks del día con reglas al pie.
 
