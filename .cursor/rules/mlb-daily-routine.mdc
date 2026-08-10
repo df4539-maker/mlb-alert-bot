@@ -34,8 +34,8 @@ Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, si
 
 ## Nombres fijos que usa el usuario
 
-- **cuadro baseline** → tabla Baseline | Todas | Solo CON | CON+edge≥3% (oficial): n, win rate, ROI, neto. Incluir contador oficial X/250 y nota de muestra chica.
-- **grafico baseline / tanking** → regenerar `scripts/plot_tanking_baseline.py` (opcional `--bank SALDO`) y abrir/guardar HTML en `C:\Documentos C\Apuestas deportivas\tanking_baseline.html` (curvas equity: Todas, Solo CON, oficial, preferida≥10%).
+- **cuadro baseline** → tabla Baseline | Todas | Solo CON | CON+edge≥3% (oficial): n, win rate, ROI, neto. Incluir contador oficial X/250 y nota de muestra chica. **También actualizar canvas** `mlb-baseline-cuadro.canvas.tsx` y regenerar `tanking_baseline.html`.
+- **grafico baseline / tanking** → regenerar `scripts/plot_tanking_baseline.py` (opcional `--bank SALDO`) y abrir/guardar HTML en `C:\Documentos C\Apuestas deportivas\tanking_baseline.html` (curvas equity: Todas, Solo CON, oficial, preferida≥10%). Actualizar canvas baseline en paralelo.
 - **cuadro eventos** → detalle partido a partido (P, edge, con/contra, resultado, profit).
 - **dame el día / card** → picks del día con reglas al pie.
 

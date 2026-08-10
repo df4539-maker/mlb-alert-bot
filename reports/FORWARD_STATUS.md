@@ -22,7 +22,7 @@
 | 8 | 2026-08-05 | ATH @ CIN | CIN(1) | 1.66 | L20 | 64.8% | +4.5% | GANÓ | +13.20 |
 | 9 | 2026-08-05 | LAD @ CHC | LAD(2) | 2.10 | L20 | 52.8% | +5.2% | PERDIÓ | -20.00 |
 
-**Oficial cerrado:** 10W / 6L · stake L330 · neto **+71.38** · ROI **+21.6%** · hit **62.5%** · contador **16 / 250**
+**Oficial cerrado:** 13W / 7L · stake L430 · neto **+104.25** · ROI **+24.2%** · hit **65.0%** · contador **20 / 250**
 
 Baseline backtest: win 55.9% · ROI +6.7%. Muestra chica.
 
@@ -37,23 +37,10 @@ Oficial tras el día: **15/250** · 9W/6L · ROI +15.2% · neto +46.38.
 TB@SEA **2 TB** @2.00 L25 ticket 5276132784 → **GANÓ** (+25) score 3:2. Preferida +18.5%.
 Oficial tras el día: **16/250** · 10W/6L · ROI +21.6% · neto +71.38.
 
-## Card 2026-08-09 — abiertas (PC bots) bank L1543 · stake L25 (1.62%)
-
-| Partido | Lado | Cuota | Stake | P | Edge real | Hora HN | Ticket | Estado |
-|---------|------|-------|-------|---|-----------|---------|--------|--------|
-| ATH @ BOS | BOS (1) | 1.50 | L25 | 79.6% | +12.9% | 11:35 | 5278496163 | ABIERTO |
-| CHC @ KC | CHC (2) | 1.60 | L25 | 72.0% | +9.5% | 12:10 | 5278507272 | ABIERTO (&lt;10%) |
-| DET @ SF | DET (2) | 1.80 | L25 | 66.9% | +11.3% | 14:05 | 5278514228 | ABIERTO |
-| TB @ SEA | TB (2) | 1.90 | L25 | 70.1% | +17.5% | 14:10 | 5278524237 | ABIERTO |
-
-Hoy: L100 · 4 tickets. Preferidas ≥10%: BOS/DET/TB. Tanking: `tanking_baseline.html` / `python scripts/plot_tanking_baseline.py --bank SALDO`.
-
-### Reglas (pie)
-1. Solo CON (P>=50%). Nunca CONTRA.
-2. Manana: edge>=5%. Resto del dia / contador 250: edge>=3%.
-3. Preferencia: apostar edge real >=+10%; listar el resto.
-4. Stake 1-2% bank · tope L25. Solo PRE-MATCH.
-5. Oficial cerrado previo: 16/250 · 10W/6L · +71.38.
+## Card 2026-08-09 — CERRADO
+3W/1L · L100 · neto **+32.87**. Preferidas ≥10%: BOS L / DET W / TB W. CHC W edge +9.5%.
+Oficial tras el día: **20/250** · 13W/7L · ROI +24.2% · neto +104.25.
+Tanking: `tanking_baseline.html` · canvas `mlb-baseline-cuadro`.
 
 CSV: data/forward_bets.csv · Rutina: reports/RUTINA.md
 
