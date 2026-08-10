@@ -30,14 +30,21 @@ Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, si
 1. Cerrar ganó/perdió; actualizar `data/forward_bets.csv` y `reports/FORWARD_STATUS.md`.
 2. Cuadro cerradas: P, cuota modelo, edge, con/contra, resultado, profit.
 3. Comparar vs baseline (win 55.9%, ROI +6.7%) — enfatizar muestra chica.
+3b. Regenerar tanking + **calendario mensual** + actualizar canvas baseline.
 4. Push a GitHub si pide actualizar el repo (sin `.env`).
 
 ## Nombres fijos que usa el usuario
 
-- **cuadro baseline** → tabla Baseline | Todas | Solo CON | CON+edge≥3% (oficial): n, win rate, ROI, neto. Incluir contador oficial X/250 y nota de muestra chica. **También actualizar canvas** `mlb-baseline-cuadro.canvas.tsx` y regenerar `tanking_baseline.html`.
+- **cuadro baseline** → tabla Baseline | Todas | Solo CON | CON+edge≥3% (oficial): n, win rate, ROI, neto. Incluir contador oficial X/250 y nota de muestra chica. **También actualizar canvas** `mlb-baseline-cuadro.canvas.tsx` y regenerar `tanking_baseline.html` + **`calendario_mensual.html`**.
 - **grafico baseline / tanking** → regenerar `scripts/plot_tanking_baseline.py` (opcional `--bank SALDO`) y abrir/guardar HTML en `C:\Documentos C\Apuestas deportivas\tanking_baseline.html` (curvas equity: Todas, Solo CON, oficial, preferida≥10%). Actualizar canvas baseline en paralelo.
+- **calendario mensual** → `scripts/plot_calendario_mensual.py` → `C:\Documentos C\Apuestas deportivas\calendario_mensual.html`. Por día: invertido, ganado (retorno), neto L y (%). Verde si neto+, rojo si neto−. Regenerar al cerrar el día / actualizar baseline.
 - **cuadro eventos** → detalle partido a partido (P, edge, con/contra, resultado, profit).
 - **dame el día / card** → picks del día con reglas al pie.
 
 - **Oficial (único que cuenta a 250):** **CON + value** → P≥50% **y** edge≥3% vs cuota real.
+- **Plan de validación (fijado):**
+  - **30 oficiales:** checkpoint — revisar hit/ROI/neto/preferida≥10%; no cambiar método salvo red flag.
+  - **~100 oficiales:** validación intermedia vs baseline (55.9% / +6.7%).
+  - **250 oficiales:** decisión de estrategia (seguir / ajustar / pausar).
+  - Hasta 30: mismo protocolo (preferencia edge≥10%, stake tope L25 / ~1–2% bank).
 - El resto (CON sin value / CONTRA) se puede listar como “fuera de protocolo”, no entra al contador ni a la decisión.

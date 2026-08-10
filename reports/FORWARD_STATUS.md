@@ -7,6 +7,7 @@
 - **Resto del día / contador 250:** edge **>= +3%**.
 - **Preferencia usuario:** priorizar **edge >= +10%** en el card (seguir listando el resto del filtro oficial).
 - Meta **250** ops = CON + edge>=3%.
+- Validación: checkpoint **30** · intermedia **~100** · decisión **250**. Hasta 30 sin cambiar método.
 
 ## Oficiales cerradas (CON + edge>=3%)
 
@@ -41,6 +42,18 @@ Oficial tras el día: **16/250** · 10W/6L · ROI +21.6% · neto +71.38.
 3W/1L · L100 · neto **+32.87**. Preferidas ≥10%: BOS L / DET W / TB W. CHC W edge +9.5%.
 Oficial tras el día: **20/250** · 13W/7L · ROI +24.2% · neto +104.25.
 Tanking: `tanking_baseline.html` · canvas `mlb-baseline-cuadro`.
+
+## Card 2026-08-10 — abiertas (PC bots) bank ~L1543 · L25
+
+| Partido | Lado | Cuota | Edge real | Hora HN | Ticket | Nota |
+|---------|------|-------|-----------|---------|--------|------|
+| BOS @ TOR | BOS (2) | 1.60 | +9.2% | 17:07 | 5280708779 | oficial &lt;10% |
+| TEX @ LAA | TEX (2) | 1.83 | +14.9% | 19:38 | 5280710552 | PREF |
+| TB @ ATH | TB (2) | 1.62 | +18.0% | 19:40 | 5280712268 | PREF |
+| COL @ AZ | AZ (1) | 1.55 | −1.2% | 19:40 | 5280715689 | FUERA protocolo |
+| HOU @ SF | HOU (2) | 1.64 | +8.3% | 19:45 | 5280717132 | oficial &lt;10% |
+
+Hoy: L125 · 5 tickets. Checkpoint oficiales **20/30**. Calendario: `calendario_mensual.html`.
 
 CSV: data/forward_bets.csv · Rutina: reports/RUTINA.md
 

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Calendario mensual — MLB Forward</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --card: #1a2332;
+    --text: #e7ecf3;
+    --muted: #9aa7b8;
+    --pos: #1b4332;
+    --pos-b: #2d6a4f;
+    --neg: #4a1520;
+    --neg-b: #9b2226;
+    --idle: #15202b;
+    --line: #2a3a4f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: "Segoe UI", system-ui, sans-serif;
+    background: #0f1419; color: var(--text); padding: 20px;
+  }
+  h1 { margin: 0 0 4px; font-size: 1.4rem; }
+  .sub { color: var(--muted); margin-bottom: 16px; font-size: 0.9rem; }
+  .summary {
+    display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;
+  }
+  .chip {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 10px; padding: 10px 14px; min-width: 140px;
+  }
+  .chip .k { color: var(--muted); font-size: 0.75rem; }
+  .chip .v { font-size: 1.1rem; font-weight: 700; margin-top: 2px; }
+  .chip.pos .v { color: #95d5b2; }
+  table.cal {
+    width: 100%; border-collapse: separate; border-spacing: 8px;
+    table-layout: fixed;
+  }
+  th {
+    color: var(--muted); font-weight: 600; font-size: 0.8rem;
+    text-align: center; padding: 4px;
+  }
+  td.day {
+    vertical-align: top; border-radius: 10px; padding: 8px;
+    border: 1px solid var(--line); background: var(--idle);
+    height: 110px;
+  }
+  td.day.pos { background: var(--pos); border-color: var(--pos-b); }
+  td.day.neg { background: var(--neg); border-color: var(--neg-b); }
+  td.day.flat { background: #243044; }
+  td.day.idle { opacity: 0.55; }
+  td.empty { background: transparent; border: none; }
+  .num { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+  .line { font-size: 0.72rem; color: #d8e0ea; display: flex; justify-content: space-between; gap: 4px; }
+  .line span { color: var(--muted); }
+  .net { font-weight: 700; font-size: 0.85rem; margin-top: 4px; }
+  .net small { font-weight: 600; opacity: 0.9; }
+  .day.pos .net { color: #b7f0ce; }
+  .day.neg .net { color: #ffc9c9; }
+  .wl { font-size: 0.68rem; color: var(--muted); margin-top: 2px; }
+  .legend { color: var(--muted); font-size: 0.8rem; margin-top: 12px; }
+  .legend b.pos { color: #95d5b2; }
+  .legend b.neg { color: #f4a3a8; }
+  footer { color: var(--muted); font-size: 0.75rem; margin-top: 16px; }
+  @media (max-width: 800px) {
+    td.day { height: auto; font-size: 0.85rem; }
+    .line, .wl { font-size: 0.65rem; }
+  }
+</style>
+</head>
+<body>
+  <h1>Calendario mensual — August 2026</h1>
+  <div class="sub">
+    Invertido / Ganado (retorno) / Neto (L y %) · verde = neto + · rojo = neto −<br/>
+    Actualizado: 2026-08-10T04:02:25.196728+00:00 · meses con data: 2026-08
+  </div>
+
+  <div class="summary">
+    <div class="chip"><div class="k">Días con apuestas</div><div class="v">8</div></div>
+    <div class="chip"><div class="k">Invertido mes</div><div class="v">L 605.00</div></div>
+    <div class="chip"><div class="k">Ganado (retorno)</div><div class="v">L 671.27</div></div>
+    <div class="chip pos"><div class="k">Neto mes</div><div class="v">+L66.27 (+11.0%)</div></div>
+  </div>
+
+  <table class="cal">
+    <thead>
+      <tr>
+        <th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th><th>Dom</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="day idle"><div class="num">1</div></td><td class="day pos">
+  <div class="num">2</div>
+  <div class="line"><span>Inv</span> L25.00</div>
+  <div class="line"><span>Gan</span> L63.75</div>
+  <div class="net">+L38.75 <small>(+155.0%)</small></div>
+  <div class="wl">1W/0L</div>
+</td></tr><tr><td class="day neg">
+  <div class="num">3</div>
+  <div class="line"><span>Inv</span> L40.00</div>
+  <div class="line"><span>Gan</span> L15.50</div>
+  <div class="net">-L24.50 <small>(--61.2%)</small></div>
+  <div class="wl">1W/3L</div>
+</td><td class="day neg">
+  <div class="num">4</div>
+  <div class="line"><span>Inv</span> L40.00</div>
+  <div class="line"><span>Gan</span> L35.60</div>
+  <div class="net">-L4.40 <small>(--11.0%)</small></div>
+  <div class="wl">2W/1L</div>
+</td><td class="day neg">
+  <div class="num">5</div>
+  <div class="line"><span>Inv</span> L205.00</div>
+  <div class="line"><span>Gan</span> L172.02</div>
+  <div class="net">-L32.98 <small>(--16.1%)</small></div>
+  <div class="wl">5W/5L</div>
+</td><td class="day pos">
+  <div class="num">6</div>
+  <div class="line"><span>Inv</span> L50.00</div>
+  <div class="line"><span>Gan</span> L102.50</div>
+  <div class="net">+L52.50 <small>(+105.0%)</small></div>
+  <div class="wl">2W/0L</div>
+</td><td class="day neg">
+  <div class="num">7</div>
+  <div class="line"><span>Inv</span> L120.00</div>
+  <div class="line"><span>Gan</span> L99.03</div>
+  <div class="net">-L20.97 <small>(--17.5%)</small></div>
+  <div class="wl">3W/3L</div>
+</td><td class="day pos">
+  <div class="num">8</div>
+  <div class="line"><span>Inv</span> L25.00</div>
+  <div class="line"><span>Gan</span> L50.00</div>
+  <div class="net">+L25.00 <small>(+100.0%)</small></div>
+  <div class="wl">1W/0L</div>
+</td><td class="day pos">
+  <div class="num">9</div>
+  <div class="line"><span>Inv</span> L100.00</div>
+  <div class="line"><span>Gan</span> L132.87</div>
+  <div class="net">+L32.87 <small>(+32.9%)</small></div>
+  <div class="wl">3W/1L</div>
+</td></tr><tr><td class="day idle"><div class="num">10</div></td><td class="day idle"><div class="num">11</div></td><td class="day idle"><div class="num">12</div></td><td class="day idle"><div class="num">13</div></td><td class="day idle"><div class="num">14</div></td><td class="day idle"><div class="num">15</div></td><td class="day idle"><div class="num">16</div></td></tr><tr><td class="day idle"><div class="num">17</div></td><td class="day idle"><div class="num">18</div></td><td class="day idle"><div class="num">19</div></td><td class="day idle"><div class="num">20</div></td><td class="day idle"><div class="num">21</div></td><td class="day idle"><div class="num">22</div></td><td class="day idle"><div class="num">23</div></td></tr><tr><td class="day idle"><div class="num">24</div></td><td class="day idle"><div class="num">25</div></td><td class="day idle"><div class="num">26</div></td><td class="day idle"><div class="num">27</div></td><td class="day idle"><div class="num">28</div></td><td class="day idle"><div class="num">29</div></td><td class="day idle"><div class="num">30</div></td></tr><tr><td class="day idle"><div class="num">31</div></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="legend">
+    <b class="pos">Verde</b> = día neto positivo &nbsp;·&nbsp;
+    <b class="neg">Rojo</b> = día neto negativo &nbsp;·&nbsp;
+    Inv = stake &nbsp;·&nbsp; Gan = dinero devuelto (payouts) &nbsp;·&nbsp; Neto = Gan − Inv
+  </div>
+  <footer>
+    Archivo: calendario_mensual.html · regenerar:
+    <code>python scripts/plot_calendario_mensual.py --year 2026 --month 8</code>
+    · se actualiza al cerrar el día / cuadro baseline.
+  </footer>
+</body>
+</html>
