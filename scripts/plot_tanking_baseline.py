@@ -33,11 +33,12 @@ def _profit(row: dict) -> float | None:
     stake = float(row.get("stake") or 0)
     odds = float(row.get("decimal_odds") or 0)
     notes = row.get("notes") or ""
-    if res == "loss":
-        return -stake
+    # Cashout / cerrar apuesta: si hay payout= en notes, usarlo (win o loss parcial).
     m = re.search(r"payout=(\d+\.?\d*)", notes)
     if m:
         return float(m.group(1)) - stake
+    if res == "loss":
+        return -stake
     return stake * (odds - 1)
 
 

@@ -33,10 +33,14 @@ def _profit_and_payout(row: dict) -> tuple[float, float, float] | None:
     stake = float(row.get("stake") or 0)
     odds = float(row.get("decimal_odds") or 0)
     notes = row.get("notes") or ""
+    # Cashout / cerrar apuesta: payout= en notes (win o loss parcial).
+    m = re.search(r"payout=(\d+\.?\d*)", notes)
+    if m:
+        payout = float(m.group(1))
+        return stake, payout, payout - stake
     if res == "loss":
         return stake, 0.0, -stake
-    m = re.search(r"payout=(\d+\.?\d*)", notes)
-    payout = float(m.group(1)) if m else stake * odds
+    payout = stake * odds
     return stake, payout, payout - stake
 
 

@@ -11,7 +11,17 @@ Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, si
 
 1. Pedir o usar el **saldo de cuenta** si no lo dio.
 2. Armar top **5–10** value del **mismo día**, PRE-MATCH only.
-3. En el cuadro incluir siempre: partido, lado (1/2), P modelo, edge vs cuota ref y vs cuota si la hay, stake sugerido.
+3. **Formato FIJO del cuadro de apuestas** (columnas en este orden):
+   | Fecha | HN | Partido | Lado | P | Mod | Mín ≥5% | Mín ≥10% | Hondubet | Edge real | ¿Apostar? | Stake |
+   - **Fecha** = fecha del juego (YYYY-MM-DD o DD/MM).
+   - **HN** = hora Honduras (obligatoria).
+   - **Mod** = `1/P` (precio justo del modelo).
+   - **Mín ≥5% / ≥10%** = cuota mínima Hondubet: `1/(P − umbral)`. (Sin columna Mín ≥3% — el umbral 3% sigue existiendo para el contador oficial, pero no se muestra; en práctica el usuario decide con ≥5% mañana y ≥10% prefer.)
+   - **Hondubet** = cuota real del ticket/pantalla si la hay; si no, `—` y el usuario compara en casa. Si el usuario reporta cuota sin apostar, dejarla con observación (NO / observar).
+   - **¿Apostar?** = PREF (≥10%) / **SÍ ≥5% · no preferido (5–10%)** / NO — observar (si Hondubet ≤ Mod o edge real bajo umbral).
+   - Separar **PREFERIDAS**, **oficial**, y **fuera** si aplica. Stake tope L25.
+   - Regla de bolsillo al pie: *en Hondubet busca cuota ≥ columna Mín; si ≤ Mod → no apostar.*
+   Sin este formato = card incompleto.
 4. **Recordar en la respuesta** estas reglas (breve, al inicio o al final):
    - **FILTRO FIJO:** solo **P ≥ 50% (CON)**. CONTRA → nunca.
    - **Mañana temprano (card 6–8 AM):** solo listar/apostar si **edge ≥ +5%** vs ref o cuota real.
@@ -23,7 +33,7 @@ Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, si
    - Máx. ops del día: cuidar que la suma de stakes no coma >~8–10% del bank.
    - **Al pie de cada cuadro de picks:** repetir siempre estas reglas (para validar) + la preferencia ≥10% + bank/% riesgo si lo dio.
    - Contador 250 = ops **CON + edge≥3%** (las de mañana ≥5% también cuentan si ≥3%).
-5. Separar ya apostadas de disponibles. En el cuadro marcar **PREFERIDA (≥10%)** vs resto. Stake sugerido con tope L25. Registrar tickets cuando mande fotos/`aposte`.
+5. **Cuadro = solo DISPONIBLES** (fechas que Hondubet ya cargó; hoy suele ser hasta mañana). Si `away@home` ya tiene ticket **ABIERTO/pending**, **quitarlo**. Partidos de días aún no cargados en HB → sección **PENDIENTE (cuando aparezcan en HB)**, no mezclar con el cuadro operable. Marcar PREFERIDA (≥10%) vs resto. Stake tope L25. Registrar tickets con fotos/`aposte`.
 
 ## Cuando el usuario actualice de noche (~8–9 PM)
 
@@ -39,7 +49,7 @@ Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, si
 - **grafico baseline / tanking** → regenerar `scripts/plot_tanking_baseline.py` (opcional `--bank SALDO`) y abrir/guardar HTML en `C:\Documentos C\Apuestas deportivas\tanking_baseline.html` (curvas equity: Todas, Solo CON, oficial, preferida≥10%). Actualizar canvas baseline en paralelo.
 - **calendario mensual** → `scripts/plot_calendario_mensual.py` → `C:\Documentos C\Apuestas deportivas\calendario_mensual.html`. Por día: invertido, ganado (retorno), neto L y (%). Verde si neto+, rojo si neto−. Regenerar al cerrar el día / actualizar baseline.
 - **cuadro eventos** → detalle partido a partido (P, edge, con/contra, resultado, profit).
-- **dame el día / card** → picks del día con reglas al pie.
+- **dame el día / card / cuadro de apuestas** → formato FIJO: Fecha | HN | Partido | Lado | P | Mod | Mín≥5% | Mín≥10% | Hondubet | Edge real | ¿Apostar? | Stake. Reglas al pie.
 
 - **Oficial (único que cuenta a 250):** **CON + value** → P≥50% **y** edge≥3% vs cuota real.
 - **Plan de validación (fijado):**
