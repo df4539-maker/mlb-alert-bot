@@ -29,8 +29,10 @@ Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, si
    - Stake **1–2% del bank** (usuario pasa saldo Hondubet). **Tope duro por apuesta: L25** (máximo hasta ahora).
    - Con bank actual, si 2% < L25 → usar el % (redondear a L5/L10); L25 solo cuando el bank lo aguante sin pasar ~2–3%.
    - **Preferencia del usuario (no cambia el filtro oficial):** priorizar / marcar **edge ≥ +10%**. Seguir listando las de 3–10% (o 5–10% en mañana), pero en cada card indicar claro: **preferimos ≥ +10%**.
+   - **Exposición (hasta ~100 oficiales, post 14 ago):** máx **4** abiertas (L100); tope duro **L125** (nunca 6/L150). Con 4 abiertas → no mid. Con 3 → solo PREF. Con 0–2 → PREF primero, mid si hay hueco. Mismo `away@home` abierto → no duplicar.
+   - Cuando el usuario pregunte **“¿apostamos?”**: responder con edge/protocolo **y** estas reglas de exposición (SÍ / NO / espera exposición).
    - Si CON pero bajo el umbral del momento → no incluir en el cuadro de apuesta.
-   - Máx. ops del día: cuidar que la suma de stakes no coma >~8–10% del bank.
+   - Máx. ops del día: cuidar que la suma de stakes no coma >~8% del bank (tope L125).
    - **Al pie de cada cuadro de picks:** repetir siempre estas reglas (para validar) + la preferencia ≥10% + bank/% riesgo si lo dio.
    - Contador 250 = ops **CON + edge≥3%** (las de mañana ≥5% también cuentan si ≥3%).
 5. **Cuadro = solo DISPONIBLES** (fechas que Hondubet ya cargó; hoy suele ser hasta mañana). Si `away@home` ya tiene ticket **ABIERTO/pending**, **quitarlo**. Partidos de días aún no cargados en HB → sección **PENDIENTE (cuando aparezcan en HB)**, no mezclar con el cuadro operable. Marcar PREFERIDA (≥10%) vs resto. Stake tope L25. Registrar tickets con fotos/`aposte`.
