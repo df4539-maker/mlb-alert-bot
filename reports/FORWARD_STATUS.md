@@ -5,88 +5,80 @@
 - Solo cuenta / solo apostar: **P modelo >= 50% (CON)** y **edge >= +3%** vs cuota real.
 - CONTRA o CON sin value: fuera de protocolo.
 - Meta **250** ops oficiales.
+- Exposición: máx **4** abiertas · tope **L125** · stake L25 · bank ~L1543.
 
-## Oficiales cerradas (CON + edge>=3%)
+## Oficiales cerradas (notes CSV · CON + edge≥3%)
 
-| # | Fecha | Partido | Lado | Cuota | Stake | P | Edge | Resultado | Profit |
-|---|-------|---------|------|-------|-------|---|------|-----------|--------|
-| 1 | 2026-08-02 | BOS @ LAD | BOS(2) | 2.55 | L25 | 60.7% | +21.5% | GANÓ | +38.75 |
-| 2 | 2026-08-04 | LAA @ BAL | BAL(1) | 1.76 | L10 | 60.7% | +3.9% | GANÓ | +7.60 |
-| 3 | 2026-08-05 | CWS @ BOS | BOS(1) | 1.76 | L20 | 59.9% | +3.1% | GANÓ | +15.20 |
-| 4 | 2026-08-05 | MIN @ KC | MIN(2) | 2.05 | L20 | 62.2% | +13.4% | PERDIÓ | -20.00 |
-| 5 | 2026-08-05 | TB @ COL | TB(2) | 1.62 | L20 | 70.9% | +9.2% | GANÓ | +12.40 |
-| 6 | 2026-08-05 | LAA @ BAL | BAL(1) | 1.80 | L20 | 62.8% | +7.3% | GANÓ | +16.00 |
-| 7 | 2026-08-05 | DET @ SEA | DET(2) | 2.25 | L20 | 61.7% | +17.2% | PERDIÓ | -20.00 |
-| 8 | 2026-08-05 | ATH @ CIN | CIN(1) | 1.66 | L20 | 64.8% | +4.5% | GANÓ | +13.20 |
-| 9 | 2026-08-05 | LAD @ CHC | LAD(2) | 2.10 | L20 | 52.8% | +5.2% | PERDIÓ | -20.00 |
-| 10 | 2026-08-06 | DET @ SEA | DET(2) | 2.05 | L25 | 63.7% | +14.9% | GANÓ | +26.25 |
-| 11 | 2026-08-06 | MIN @ KC | MIN(2) | 2.05 | L25 | 58.8% | +10.0% | GANÓ | +26.25 |
-| 12 | 2026-08-07 | ATH @ BOS | BOS(1) | 1.36 | L20 | 82.0% | +8.4% | GANÓ | +7.20 |
-| 13 | 2026-08-07 | CHC @ KC | CHC(2) | 1.58 | L20 | 74.2% | +10.9% | GANÓ | +11.60 |
-| 14 | 2026-08-07 | DET @ SF | DET(2) | 1.76 | L20 | 68.6% | +11.7% | PERDIÓ | -20.00 |
-| 15 | 2026-08-07 | TB @ SEA | TB(2) | 2.00 | L20 | 66.9% | +16.9% | GANÓ | +20.00 |
-| 16 | 2026-08-07 | CIN @ WSH | CIN(2) | 2.00 | L20 | 65.6% | +15.6% | PERDIÓ | -20.00 |
-| 17 | 2026-08-07 | ATL @ NYY | ATL(2) | 1.74 | L20 | 63.3% | +5.8% | PERDIÓ | -20.00 |
-| 18 | 2026-08-08 | TB @ SEA | TB(2) | 2.00 | L25 | 66.9% | +16.9% | GANÓ | +25.00 |
-| 19 | 2026-08-09 | ATH @ BOS | BOS(1) | 1.50 | L25 | 79.6% | +13.0% | PERDIÓ | -25.00 |
-| 20 | 2026-08-09 | CHC @ KC | CHC(2) | 1.60 | L25 | 72.0% | +9.5% | GANÓ | +15.00 |
-| 21 | 2026-08-09 | DET @ SF | DET(2) | 1.80 | L25 | 66.9% | +11.3% | GANÓ | +20.00 |
-| 22 | 2026-08-09 | TB @ SEA | TB(2) | 1.90 | L25 | 68.5% | +15.9% | GANÓ | +22.50 |
-| 23 | 2026-08-10 | BOS @ TOR | BOS(2) | 1.60 | L25 | 71.7% | +9.2% | PERDIÓ | -25.00 |
-| 24 | 2026-08-10 | TEX @ LAA | TEX(2) | 1.83 | L25 | 69.5% | +14.8% | GANÓ | +20.75 |
-| 25 | 2026-08-10 | TB @ ATH | TB(2) | 1.62 | L25 | 79.7% | +18.0% | GANÓ | +15.50 |
-| 26 | 2026-08-10 | HOU @ SF | HOU(2) | 1.64 | L25 | 70.7% | +9.7% | GANÓ | +16.00 |
-| 27 | 2026-08-11 | CHC @ WSH | CHC(2) | 1.58 | L25 | 68.9% | +5.6% | GANÓ | +14.50 |
-| 28 | 2026-08-11 | BOS @ TOR | BOS(2) | 2.30 | L25 | 68.2% | +24.8% | PERDIÓ | -25.00 |
-| 29 | 2026-08-11 | TEX @ LAA | TEX(2) | 1.71 | L25 | 69.5% | +11.0% | PERDIÓ | -25.00 |
-| 30 | 2026-08-11 | TB @ ATH | TB(2) | 1.60 | L25 | 79.7% | +17.2% | GANÓ | +15.00 |
-| 31 | 2026-08-11 | HOU @ SF | HOU(2) | 1.52 | L25 | 69.3% | +3.5% | PERDIÓ | -25.00 |
-| 32 | 2026-08-11 | TB @ ATH | TB(2) | 1.52 | L25 | 79.7% | +14.0% | GANÓ | +13.00 |
-| 33 | 2026-08-12 | TEX @ LAA | TEX(2) | 1.74 | L25 | 71.0% | +13.5% | PERDIÓ | -25.00 |
-| 34 | 2026-08-13 | CHC @ WSH | CHC(2) | 1.71 | L25 | 68.9% | +10.4% | PERDIÓ | -25.00 |
-| 35 | 2026-08-13 | PHI @ MIN | PHI(2) | 1.95 | L25 | 59.9% | +8.7% | GANÓ | +23.75 |
-| 36 | 2026-08-13 | MIL @ LAD | MIL(2) | 2.20 | L25 | 62.5% | +17.1% | GANÓ | +30.00 |
-| 37 | 2026-08-13 | TEX @ LAA | TEX(2) | 1.66 | L25 | 71.0% | +10.7% | PERDIÓ | -25.00 |
-| 38 | 2026-08-14 | BOS @ PIT | BOS(2) | 1.66 | L25 | 73.0% | +12.8% | PERDIÓ | -25.00 |
-| 39 | 2026-08-14 | SD @ CLE | SD(2) | 2.10 | L25 | 67.6% | +19.9% | GANÓ | +27.50 |
-| 40 | 2026-08-14 | MIA @ CIN | MIA(2) | 1.95 | L25 | 56.4% | +5.1% | PERDIÓ | -25.00 |
-| 41 | 2026-08-14 | TEX @ ATH | TEX(2) | 1.95 | L25 | 72.7% | +21.4% | PERDIÓ | -25.00 |
-| 42 | 2026-08-14 | MIL @ LAD | MIL(2) | 2.50 | L25 | 62.5% | +22.5% | PERDIÓ | -25.00 |
-| 43 | 2026-08-14 | KC @ LAA | KC(2) | 1.90 | L25 | 61.0% | +8.4% | GANÓ | +22.50 |
+**Oficial:** 25W / 20L · stake L1055 · neto **+26.41** · ROI **+2.5%** · hit **55.6%** · contador **45 / 250**
 
-**Oficial (notes CSV · fuente del cuadro baseline):** 23W / 18L · stake L955 · neto **+28.91** · ROI **+3.0%** · contador **41 / 250** · hit **56.1%**
-
-> Nota: la tabla de arriba usa recount Elo (puede diferir ±2 ops). El **cuadro baseline** y tanking usan P/edge de las notes del CSV → **41/250**.
+(Viaje provisorio citó +24.55 / ROI +2.3%; bots con scores MLB API Aug 16 → **+26.41** / **+2.5%**. Misma 45 · 25W/20L.)
 
 ### Cuadro baseline (cerradas)
 
 | Bucket | n | Record | Hit % | ROI % | Neto | Stake |
 |--------|---|--------|-------|-------|------|-------|
 | Baseline backtest | — | — | 55.9 | +6.7 | — | — |
-| Todas | 55 | 29W/26L | 52.7 | −0.1 | −0.76 | L1205 |
-| Solo CON | 53 | 28W/25L | 52.8 | +1.2 | +13.74 | L1175 |
-| CON+edge≥3% (oficial) | **41** | **23W/18L** | **56.1** | **+3.0** | **+28.91** | **L955** |
-| Preferida ≥10% | 27 | 14W/13L | 51.9 | +1.2 | +7.99 | — |
-| Oficial mid 3–10% | 14 | 9W/5L | 64.3 | +6.7 | +20.92 | — |
+| Todas | 59 | 31W/28L | 52.5 | −0.2 | −3.26 | L1305 |
+| Solo CON | 57 | 30W/27L | 52.6 | +0.9 | +11.24 | L1275 |
+| CON+edge≥3% (oficial) | **45** | **25W/20L** | **55.6** | **+2.5** | **+26.41** | **L1055** |
+| Preferida ≥10% | 30 | 15W/15L | 50.0 | −2.0 | −14.51 | — |
+| Oficial mid 3–10% | 15 | 10W/5L | 66.7 | +12.2 | +40.92 | — |
 
-Baseline: win 55.9% · ROI +6.7%. Hit oficial ≈ baseline; ROI aún bajo baseline. Muestra chica — no cambiar método.
+Baseline: win 55.9% · ROI +6.7%. Hit ≈ baseline; ROI bajo baseline. Muestra chica — **no cambiar método**.
 
-## Pendientes (abiertas)
+### Cierre 16 ago (2W/2L · neto día −2.50)
 
-| Ticket | Fecha | HN | Partido | Lado | Cuota | Stake | P | Edge | Notas |
-|--------|-------|-----|---------|------|-------|-------|---|------|-------|
-| 5300300843 | 2026-08-16 | 11:35 | BOS @ PIT | BOS(2) | 1.83 | L25 | 73.0% | +18.4% | PREF ≥10% |
-| 5300307542 | 2026-08-16 | 14:07 | KC @ LAA | KC(2) | 1.80 | L25 | 61.0% | +5.4% | mid ≥5% |
-| 5300346202 | 2026-08-16 | 11:37 | NYY @ TOR | NYY(2) | 2.10 | L25 | 59.0% | +11.4% | PREF ≥10% |
-| 5300360533 | 2026-08-16 | 14:05 | TEX @ ATH | TEX(2) | 1.71 | L25 | 72.7% | +14.2% | PREF ≥10% |
+| Ticket | Partido | Lado | Cuota | Res | Profit | Score |
+|--------|---------|------|-------|-----|--------|-------|
+| 5300300843 | BOS@PIT | 2 BOS | 1.83 | L | −25.00 | 3:8 |
+| 5300346202 | NYY@TOR | 2 NYY | 2.10 | W | +27.50 | 4:3 |
+| 5300360533 | TEX@ATH | 2 TEX | 1.71 | L | −25.00 | 2:5 |
+| 5300307542 | KC@LAA | 2 KC | 1.80 | W | +20.00 | 3:0 |
 
-**Exposición:** 4 abiertas · L100 (~6.5% bank) · cupo restante **0** (máx 4 / tope L125). Con 4: no más tickets hasta que cierre alguna.
+**Pendientes:** 0 · exposición **0/4**.
 
-## Card 2026-08-06
+---
 
-| # | Partido | Apostá | Lado | P | Cuota modelo | Edge | Stake sug. |
-|---|---------|--------|------|---|--------------|------|------------|
+## Card Lun 17 ago 2026 (PRE-MATCH · mañana)
 
-Verificar cuota Hondubet: si edge real < 3%, saltar. Prioridad bank chico: 1-5.
+**Exposición:** 0/4 · caben **4** · PREF primero · mid si hay hueco · stake L25 · bank ~L1543.
 
-CSV: `data/forward_bets.csv` · Rutina: `reports/RUTINA.md`
+Hondubet aún no cargado en este card → Edge = vs ref −110; al reportar cuota: `edge real = P − 1/HB`. Si HB ≤ Mod → SKIP.
+
+### 1) PREFERIDAS ≥ +10% (modelo vs −110)
+
+| Partido | Apuesta | P | Cuota mod | Edge | Hora HN | Stake |
+|---------|---------|---|-----------|------|---------|-------|
+| LAD@COL | **2 LAD** | 70.2% | 1.42 | **+17.8%** | 18:40 | L25 |
+| ATL@MIN | **2 ATL** | 64.0% | 1.56 | **+11.6%** | 17:40 | L25 |
+| DET@PIT | **2 DET** | 63.7% | 1.57 | **+11.3%** | 17:05 | L25 |
+
+Mín HB ≥10%: LAD **1.66** · ATL **1.85** · DET **1.86**.
+
+### 2) Listadas +3% a &lt;10% (no preferidas · yo decido)
+
+| Partido | Apuesta | P | Cuota mod | Edge | Hora HN | Stake |
+|---------|---------|---|-----------|------|---------|-------|
+| SD@NYM | **2 SD** | 61.2% | 1.63 | +8.8% | 17:10 | L25 |
+| BAL@TB | **1 TB** | 58.3% | 1.72 | +5.9% | 16:05 | L25 |
+
+Mín HB ≥5%: SD **1.78** · TB **1.88**.
+
+### Top 4 para ocupar exposición (PREF primero)
+
+1. **LAD@COL · 2 LAD** · 18:40 · PREF +17.8% · Mín≥10% 1.66  
+2. **ATL@MIN · 2 ATL** · 17:40 · PREF +11.6% · Mín≥10% 1.85  
+3. **DET@PIT · 2 DET** · 17:05 · PREF +11.3% · Mín≥10% 1.86  
+4. **SD@NYM · 2 SD** · 17:10 · mid +8.8% · Mín≥5% 1.78 *(solo si las 3 PREF OK y queda 1 cupo)*
+
+Con 0–2 abiertas: PREF primero, mid si hay hueco. Con 3: solo PREF. Con 4: stop.
+
+### Pie de reglas
+
+- Solo **CON** (P≥50%). Nunca CONTRA. Solo **PRE-MATCH** (si inició/warmup → no).
+- Mañana: edge ≥ **+5%**. Contador 250: ≥ **+3%**. Preferencia: edge real ≥ **+10%**.
+- `edge = P − 1/cuota_real`. Si HB acorta bajo umbral → **SKIP**. Si HB ≤ Mod → no.
+- Stake **L25** · máx **4** abiertas · tope **L125** · no duplicar `away@home` abierto · suma ≤ ~8% bank.
+- ¿Apostamos? → protocolo + exposición (SÍ / NO / espera).
+
+CSV: `data/forward_bets.csv` · Rutina: `reports/RUTINA.md` · Tanking: `reports/tanking_baseline.html`
