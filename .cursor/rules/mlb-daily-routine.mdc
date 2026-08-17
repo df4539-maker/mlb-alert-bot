@@ -7,10 +7,22 @@ alwaysApply: true
 
 Esta es la **compu de los bots** (`listen` 24/7). Viaje/casa solo `git pull`, sin `listen`.
 
+## Materia prima Elo (cada mañana) — PC viaje arma el card
+
+1. Generar CSV: `python scripts/export_daily_predictions.py --date YYYY-MM-DD`
+   - Salida: `data/predictions_YYYY-MM-DD.csv`
+   - Columnas: `date,away,home,side_con,P,cuota_modelo,hora_HN,game_pk`
+   - Todos los partidos **PRE-MATCH** del día (no solo value). `side_con` = lado con P≥50%.
+2. `git add` ese CSV (+ cierres si hay) → `git push` → avisar: **predicciones listas YYYY-MM-DD · commit xxx**
+3. La **PC de viaje** hace `git pull`, aplica consignas + cuotas Hondubet y arma el **cuadro de 4**.
+4. Bots: `listen`, registrar tickets, cierres, push status. Viaje: **NO** `listen`.
+
 ## Cuando el usuario pida el día / apuestas de la mañana (~6–7 AM)
 
+Preferir exportar predicciones (arriba). Si pide card completo desde bots, usar consignas abajo.
+
 1. Pedir o usar el **saldo de cuenta** si no lo dio.
-2. Armar top **5–10** value del **mismo día**, PRE-MATCH only.
+2. Armar top **5–10** value del **mismo día**, PRE-MATCH only (o dejar que viaje arme desde el CSV).
 3. **Formato FIJO del cuadro de apuestas** (columnas en este orden):
    | Fecha | HN | Partido | Lado | P | Mod | Mín ≥5% | Mín ≥10% | Hondubet | Edge real | ¿Apostar? | Stake |
    - **Fecha** = fecha del juego (YYYY-MM-DD o DD/MM).

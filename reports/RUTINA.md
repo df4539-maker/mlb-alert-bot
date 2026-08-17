@@ -6,25 +6,34 @@ Repo: https://github.com/df4539-maker/mlb-alert-bot
 
 | PC | Rol |
 |----|-----|
-| **Compu de los bots** | `listen` 24/7 · alertas · registra apuestas · **push** a GitHub |
-| **Compu de viaje** | Cursor / revisar · **no** `listen` · solo `git pull` |
+| **Compu de los bots** | `listen` 24/7 · Elo CSV mañana · registra tickets/cierres · **push** |
+| **Compu de viaje** | Arma el **card diario** · `git pull` · **no** `listen` |
 | **Compu de la casa** | Análisis / proyectos nuevos · **no** `listen` |
+
+## Flujo card diario (desde ago 2026)
+
+1. **Bots (mañana):** genera `data/predictions_YYYY-MM-DD.csv` (Elo PRE-MATCH, todos los juegos del día) → `git push` → avisa: *predicciones listas YYYY-MM-DD · commit xxx*
+2. **Viaje:** `git pull` → aplica consignas (CON, edge 3/5/10%, máx 4, L25) + cuotas Hondubet → arma el **cuadro de 4**
+3. **Bots:** `listen`, registrar tickets, cierres, push CSV/status
+4. **Viaje:** **NO** `listen`
+
+```powershell
+# Bots — materia prima Elo
+cd ruta\mlb-alert-bot
+.\.venv\Scripts\python.exe scripts\export_daily_predictions.py --date YYYY-MM-DD
+git add data/predictions_YYYY-MM-DD.csv
+git commit -m "Predictions YYYY-MM-DD"
+git push origin master
+```
+
+Columnas CSV: `date,away,home,side_con,P,cuota_modelo,hora_HN,game_pk`
 
 ## Rutina diaria (bots)
 
 ### Mañana 6:00–7:00
-1. Usuario pasa **saldo** + “dame el día”.
-2. Bot/agente arma top **5–10** value del mismo día (PRE-MATCH).
-3. **Formato FIJO del cuadro:** Fecha | HN | Partido | Lado | P | Mod | Mín ≥5% | Mín ≥10% | Hondubet | Edge real | ¿Apostar? | Stake.
-   - Mod = 1/P. Mín = 1/(P − umbral). Si Hondubet ≤ Mod → no apostar. (Sin columna Mín ≥3%.)
-4. Reglas **FIJAS** (siempre al pie del cuadro):
-   - Solo **CON** (P ≥ 50%). CONTRA → nunca.
-   - **Mañana (6–8 AM):** edge **≥ +5%** para entrar ya.
-   - **Resto del día / contador 250:** edge **≥ +3%**.
-   - **Preferencia:** priorizar **edge ≥ +10%**; listar igual el resto del filtro.
-   - Stake **1–2% del bank**. Tope **L25**. Máx. 5 (bank chico) u 8–10.
-   - Meta **250** = CON + edge≥3%.
-   - Decisión en casa: comparar cuota Hondubet vs columnas **Mín ≥5% / ≥10%** (no vs edge del card −110).
+1. Generar predicciones Elo del día (`export_daily_predictions.py`) + push.
+2. Viaje arma el card; bots no arma el cuadro de 4 (salvo pedido).
+3. Consignas fijas (viaje aplica): CON only · mañana ≥5% · día ≥3% · prefer ≥10% · L25 · máx 4 abiertas / tope L125 · PRE-MATCH.
 
 ### Noche 20:00–21:00
 1. Cerrar ganó/perdió (foto / `gane` / `perdi`).
@@ -36,12 +45,10 @@ Repo: https://github.com/df4539-maker/mlb-alert-bot
 cd ruta\mlb-alert-bot
 git pull origin master
 ```
-Luego en Cursor: “actualizá” / leé `reports/FORWARD_STATUS.md`.
+Leé `data/predictions_YYYY-MM-DD.csv` + `reports/FORWARD_STATUS.md`.
 
-## Contador (solo “con” modelo, sin contra)
+## Contador
 
-Al 2026-08-05: **6 / 250** · 3W/3L · stake L75 · neto +24.35 · ROI ~+32% (muestra chica).
+Ver detalle actual: `reports/FORWARD_STATUS.md`.
 
 Baseline backtest: win 55.9% · ROI +6.7%.
-
-Ver detalle: `reports/FORWARD_STATUS.md`.
