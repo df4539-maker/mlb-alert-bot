@@ -35,50 +35,43 @@ Baseline: win 55.9% · ROI +6.7%. Hit ≈ baseline; ROI bajo baseline. Muestra c
 | 5300360533 | TEX@ATH | 2 TEX | 1.71 | L | −25.00 | 2:5 |
 | 5300307542 | KC@LAA | 2 KC | 1.80 | W | +20.00 | 3:0 |
 
-**Pendientes:** 0 · exposición **0/4**.
+**Pendientes:** 0 · exposición **0/4** (antes del card 17).
 
 ---
 
-## Card Lun 17 ago 2026 (PRE-MATCH · mañana)
+## Card Lun 17 ago 2026 (PRE-MATCH · en curso)
 
-**Exposición:** 0/4 · caben **4** · PREF primero · mid si hay hueco · stake L25 · bank ~L1543.
+**Exposición:** **3/4** · L75 · cabe **1** · con 3: **solo PREF (≥10%)** · stake L25 · bank ~L1543.
 
-Hondubet aún no cargado en este card → Edge = vs ref −110; al reportar cuota: `edge real = P − 1/HB`. Si HB ≤ Mod → SKIP.
+### Apostadas (ABIERTO)
+| Ticket | Partido | Lado | Cuota HB | Stake | P | Edge | Si gana | Si pierde | Nota |
+|--------|---------|------|----------|-------|---|------|---------|-----------|------|
+| 5303629617 | ATL @ MIN | **2 ATL** | 1.80 | L25 | 64.0% | +8.4% | **+20.00** | −25 | mid · ya puesta · HB&lt;2* |
+| 5303632185 | DET @ PIT | **2 DET** | 1.83 | L25 | 63.7% | +9.1% | **+20.75** | −25 | mid · ya puesta · HB&lt;2* |
+| 5303633055 | SD @ NYM | **2 SD** | 2.00 | L25 | 61.2% | +11.2% | **+25.00** | −25 | **PREF** · cumple ≥2.00 |
 
-### 1) PREFERIDAS ≥ +10% (modelo vs −110)
+\*Puestas antes de la consigna cuota≥2.00; se respetan. Nuevas: solo HB≥2.00.
 
-| Partido | Apuesta | P | Cuota mod | Edge | Hora HN | Stake |
-|---------|---------|---|-----------|------|---------|-------|
-| LAD@COL | **2 LAD** | 70.2% | 1.42 | **+17.8%** | 18:40 | L25 |
-| ATL@MIN | **2 ATL** | 64.0% | 1.56 | **+11.6%** | 17:40 | L25 |
-| DET@PIT | **2 DET** | 63.7% | 1.57 | **+11.3%** | 17:05 | L25 |
+### SKIP
+| Partido | Motivo |
+|---------|--------|
+| LAD @ COL · 2 LAD | HB 1.38 · edge −2.3% · cara |
 
-Mín HB ≥10%: LAD **1.66** · ATL **1.85** · DET **1.86**.
+### Último cupo (solo si edge real ≥+10%)
+| Partido | Apuesta | P | Cuota mod | Mín HB ≥10% | Hora |
+|---------|---------|---|-----------|-------------|------|
+| BAL @ TB | **1 TB** | 58.3% | 1.72 | **≥2.07** | 16:05 |
 
-### 2) Listadas +3% a &lt;10% (no preferidas · yo decido)
-
-| Partido | Apuesta | P | Cuota mod | Edge | Hora HN | Stake |
-|---------|---------|---|-----------|------|---------|-------|
-| SD@NYM | **2 SD** | 61.2% | 1.63 | +8.8% | 17:10 | L25 |
-| BAL@TB | **1 TB** | 58.3% | 1.72 | +5.9% | 16:05 | L25 |
-
-Mín HB ≥5%: SD **1.78** · TB **1.88**.
-
-### Top 4 para ocupar exposición (PREF primero)
-
-1. **LAD@COL · 2 LAD** · 18:40 · PREF +17.8% · Mín≥10% 1.66  
-2. **ATL@MIN · 2 ATL** · 17:40 · PREF +11.6% · Mín≥10% 1.85  
-3. **DET@PIT · 2 DET** · 17:05 · PREF +11.3% · Mín≥10% 1.86  
-4. **SD@NYM · 2 SD** · 17:10 · mid +8.8% · Mín≥5% 1.78 *(solo si las 3 PREF OK y queda 1 cupo)*
-
-Con 0–2 abiertas: PREF primero, mid si hay hueco. Con 3: solo PREF. Con 4: stop.
+Si TB &lt; 2.07 → no llenar el 4º (regla: con 3 solo PREF). Con 4 → stop.
 
 ### Pie de reglas
+- Solo CON · PRE-MATCH · edge real = P − 1/HB · máx 4 · L25
+- Preferencia ≥10%; mid 3–10% si hay hueco
+- **CONSIGNA (desde 16 ago noche): cuota HB ≥ 2.00** (ganancia ≥ stake). Si HB &lt; 2.00 → **SKIP** aunque haya edge.
 
-- Solo **CON** (P≥50%). Nunca CONTRA. Solo **PRE-MATCH** (si inició/warmup → no).
-- Mañana: edge ≥ **+5%**. Contador 250: ≥ **+3%**. Preferencia: edge real ≥ **+10%**.
-- `edge = P − 1/cuota_real`. Si HB acorta bajo umbral → **SKIP**. Si HB ≤ Mod → no.
-- Stake **L25** · máx **4** abiertas · tope **L125** · no duplicar `away@home` abierto · suma ≤ ~8% bank.
-- ¿Apostamos? → protocolo + exposición (SÍ / NO / espera).
+### Nota abiertas 17 ago (antes de la consigna cuota≥2)
+ATL 1.80 y DET 1.83 **ya estaban puestas** → se respetan.  
+SD 2.00 cumple.  
+De aquí en adelante: no nuevas con HB &lt; 2.00 (TB u otras).
 
-CSV: `data/forward_bets.csv` · Rutina: `reports/RUTINA.md` · Tanking: `reports/tanking_baseline.html`
+CSV: `data/forward_bets.csv` · Rutina: `reports/RUTINA.md`
